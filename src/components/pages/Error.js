@@ -1,6 +1,6 @@
 import React from "react";
 import Page from "./Page";
-import RoundedButton from "../reusable/RoundedButton";
+import LinkButton from "../reusable/LinkButton";
 
 const Error = () => {
 
@@ -69,9 +69,9 @@ const Error = () => {
 
                 </div>
 
-                <RoundedButton>
+                <LinkButton to="/">
                     Take Me Home
-                </RoundedButton>
+                </LinkButton>
             </div>
         </Page>
     );
