@@ -11,7 +11,7 @@ const PageHeader = (props) => {
     
     return (
         <div style={styles}>
-            <Text emphasis size="50" dark>
+            <Text bold size="50" dark>
                 {props.children}
             </Text>
         </div>

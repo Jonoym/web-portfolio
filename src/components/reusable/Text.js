@@ -5,7 +5,7 @@ const Text = (props) => {
     const styles = {
     }
 
-    if (props.emphasis) {
+    if (props.bold) {
         styles.fontWeight = "bold";
     }
 
