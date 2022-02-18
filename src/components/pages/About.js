@@ -4,6 +4,8 @@ import PageContents from "../reusable/PageContents";
 import PageHeader from "../reusable/PageHeader";
 import Text from "../reusable/Text";
 
+import Bot from "../../images/bot.png";
+
 const About = () => {
 
     const styles = {
@@ -44,9 +46,7 @@ const About = () => {
                 <PageHeader>About</PageHeader>
                 <div style={styles.row}>
                     {/* Image */}
-                    <div>
-                        <div style={styles.image}/>
-                    </div>
+                    <img src={Bot} style={styles.image}/>
 
                     <div style={styles.introduction}>
                         <Text bold size="50" dark>

@@ -4,6 +4,8 @@ import PageContents from "../reusable/PageContents";
 import Text from "../reusable/Text";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Bot from "../../images/bot.png";
+
 
 
 const Home = () => {
@@ -26,8 +28,8 @@ const Home = () => {
             margin: "20px 15px"
         },
         image: {
-            height: "400px",
-            width: "400px",
+            height: "800px",
+            width: "800px",
             marginLeft: "100px",
 
             borderRadius: "100%",
@@ -58,9 +60,7 @@ const Home = () => {
                     </div>
                 </div>
                 {/* Image */}
-                <div style={styles.image}>
-
-                </div>
+                <img src={Bot} style={styles.image}/>
             </PageContents>
         </Page>
     );
