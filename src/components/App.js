@@ -15,7 +15,6 @@ import Error from "./pages/Error";
 
 const App = () => {
 
-
     return (
         <BrowserRouter>
             <Routes>

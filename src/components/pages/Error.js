@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "./Page";
+import RoundedButton from "../reusable/RoundedButton";
 
 const Error = () => {
 
@@ -10,6 +11,7 @@ const Error = () => {
             height: "100%",
 
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
 
@@ -24,6 +26,29 @@ const Error = () => {
             fontWeight: "bold",
 
             color: "#10102C",
+        },
+        heading: {
+            fontSize: "25px",
+
+            color: "#3B3B50",
+            fontWeight: "bold",
+
+            marginBottom: "30px"
+        },
+        subheading: {
+            fontSize: "25px",
+
+            color: "#3B3B50",
+        },
+        image: {
+            height: "400px",
+            width: "400px",
+
+            borderRadius: "100%",
+            background: "#10102C",
+
+            margin: "30px 0px"
+
         }
     }
 
@@ -34,6 +59,19 @@ const Error = () => {
                 <div style={styles.pageHeader}>
                     Ooops
                 </div>
+                <div style={styles.heading}>
+                    Looks like you've gotten lost.
+                </div>
+                <div style={styles.subheading}>
+                    Even I'm not sure how you got here.
+                </div>
+                <div style={styles.image}>
+
+                </div>
+
+                <RoundedButton>
+                    Take Me Home
+                </RoundedButton>
             </div>
         </Page>
     );
