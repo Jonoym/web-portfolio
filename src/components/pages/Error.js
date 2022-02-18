@@ -26,7 +26,7 @@ const Error = () => {
                 <PageHeader>
                     Ooops
                 </PageHeader>
-                <Text emphasis>
+                <Text bold>
                     Looks like you've gotten lost.
                 </Text>
                 <Text>

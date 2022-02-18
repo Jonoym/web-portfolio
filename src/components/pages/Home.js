@@ -41,7 +41,7 @@ const Home = () => {
             <PageContents row>
                 {/* Information Container holding the name, subheading and icons */}
                 <div style={styles.information}>
-                    <Text emphasis size="100" dark>
+                    <Text bold size="100" dark>
                         Anton Lui
                     </Text>
                     <Text>
