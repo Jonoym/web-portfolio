@@ -10,7 +10,7 @@ const NavBar = () => {
             position: "relative",
             width: "250px",
             height: "100vh",
-            zIndex: "0"
+            zIndex: "0",
         },
         navbar: {
             position: "fixed",
@@ -52,6 +52,7 @@ const NavBar = () => {
                     <Link to="/experience" style={styles.link}>Experience</Link>
                     <Link to="/projects" style={styles.link}>Projects</Link>
                     <Link to="/contact" style={styles.link}>Contact</Link>
+                    <Link to="/error" style={styles.link}>Error</Link>
                 </div>
             </div>
             <div style={styles.navbarBox}>
