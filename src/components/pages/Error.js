@@ -1,10 +1,10 @@
 import React from "react";
 import Page from "./Page";
 
-const Projects = () => {
+const Error = () => {
     return (
-        <Page/>
+        <Page pageId="Error"/>
     );
 }
 
-export default Projects;
+export default Error;

@@ -24,16 +24,15 @@ const NavBar = () => {
         homeLink: {
             textDecoration: "none",
             fontSize: "50px",
+            fontWeight: "bold",
             color: "#10102C",
-    
-            marginBottom: "40px"
         },
         link: {
             textDecoration: "none",
             fontSize: "30px",
             color: "#3B3B50",
 
-            marginBottom: "40px"
+            marginTop: "40px"
         }
     }
 

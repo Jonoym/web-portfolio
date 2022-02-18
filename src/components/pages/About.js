@@ -1,10 +1,10 @@
 import React from "react";
 import Page from "./Page";
 
-const Home = () => {
+const About = () => {
     return (
-        <Page />
+        <Page pageId="About"/>
     );
 }
 
-export default Home;
+export default About;
