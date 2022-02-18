@@ -21,6 +21,14 @@ const Text = (props) => {
         styles.color = "#3B3B50";
     }
     
+    if (props.light) {
+        styles.color = "#414365";
+    }
+
+    if (props.color) {
+        styles.color = props.color;
+    }
+    
     return (
         <div style={styles}>
             {props.children}

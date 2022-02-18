@@ -3,6 +3,9 @@ import Page from "../reusable/Page";
 import PageContents from "../reusable/PageContents";
 import PageHeader from "../reusable/PageHeader";
 
+import ExperienceGallery from "../reusable/experience/ExperienceGallery";
+import ExperienceCard from "../reusable/experience/ExperienceCard";
+
 const Experience = () => {
 
     const styles = {
@@ -14,6 +17,11 @@ const Experience = () => {
             {/* Page Contents that will be passed as children components to the Page component */}
             <PageContents>
                 <PageHeader>Experience</PageHeader>
+                <ExperienceGallery>
+                    <ExperienceCard />
+                    <ExperienceCard />
+                    <ExperienceCard />
+                </ExperienceGallery>
             </PageContents>
         </Page>
     );
