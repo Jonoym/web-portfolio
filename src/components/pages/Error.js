@@ -5,6 +5,8 @@ import PageHeader from "../reusable/PageHeader";
 import LinkButton from "../reusable/LinkButton";
 import Text from "../reusable/Text";
 
+import Bot from "../../images/bot.png";
+
 const Error = () => {
 
     const styles = {
@@ -15,7 +17,7 @@ const Error = () => {
             borderRadius: "100%",
             background: "#10102C",
 
-            margin: "30px 0px"
+            margin: "30px 0px",
         }
     }
 
@@ -30,7 +32,7 @@ const Error = () => {
                 <Text>
                     Even I'm not sure how you got here.
                 </Text>
-                <div style={styles.image} />
+                <img src={Bot} style={styles.image}/>
                 <LinkButton to="/">
                     Take Me Home
                 </LinkButton>
