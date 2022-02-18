@@ -4,10 +4,9 @@ import NavBar from "../reusable/NavBar";
 const Page = (props) => {
     const styles = {
         height: "100vh",
-        background: "#C2C5CB",
-        position: "relative",
 
         display: "flex",
+        position: "relative"
     }
 
     return (
