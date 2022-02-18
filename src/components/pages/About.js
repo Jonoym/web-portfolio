@@ -1,7 +1,7 @@
 import React from "react";
-import Page from "../reusable/Page";
-import PageContents from "../reusable/PageContents";
-import PageHeader from "../reusable/PageHeader";
+import Page from "../reusable/page/Page";
+import PageContents from "../reusable/page/PageContents";
+import PageHeader from "../reusable/page/PageHeader";
 import Text from "../reusable/Text";
 
 import Bot from "../../images/bot.png";
