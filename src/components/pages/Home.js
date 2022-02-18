@@ -1,6 +1,6 @@
 import React from "react";
-import Page from "../reusable/Page";
-import PageContents from "../reusable/PageContents";
+import Page from "../reusable/page/Page";
+import PageContents from "../reusable/page/PageContents";
 import Text from "../reusable/Text";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";

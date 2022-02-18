@@ -1,20 +1,19 @@
 import React from "react";
-import { FaCalendarAlt } from "react-icons/fa";
-import Text from "./Text";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import Text from "../Text";
 
 
-const Date = (props) => {
+const Location = (props) => {
 
     const styles = {
         locations: {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            marginTop: "10px"
         },
         icon: {
             fontSize: "20px",
-            marginRight: "5px",
+            marginRight: "10px",
             color: "#878BED"
         },
 
@@ -22,10 +21,10 @@ const Date = (props) => {
 
     return (
         <div style={styles.locations}>
-            <FaCalendarAlt style={styles.icon}/>
+            <FaMapMarkedAlt style={styles.icon}/>
             <Text light size="14">{props.children}</Text>
         </div>
     );
 }
 
-export default Date;
+export default Location;

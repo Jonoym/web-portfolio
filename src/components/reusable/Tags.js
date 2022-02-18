@@ -4,7 +4,9 @@ const Tags = (props) => {
 
     const style = {
         display: "flex",
-        flexDiretion: "row"
+        flexDiretion: "row",
+        flexWrap: "wrap",
+        marginTop: "20px"
     }
 
     return (

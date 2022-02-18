@@ -1,8 +1,8 @@
 import React from "react";
 import Text from "../Text";
 
-import Location from "../Location";
-import Date from "../Date";
+import Location from "../icons/Location";
+import Date from "../icons/Date";
 import Tag from "../Tag";
 import Tags from "../Tags";
 
@@ -47,7 +47,7 @@ const ExperienceCard = () => {
             width: "70%",
             display: "flex",
             flexDirection: "column",    
-            justifyContent: "space-evenly",
+            justifyContent: "center",
             padding: "40px"
         }
     }

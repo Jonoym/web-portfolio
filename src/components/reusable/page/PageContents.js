@@ -7,14 +7,16 @@ const PageContents = (props) => {
         width: "90%",
         height: "100%",
 
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-
         margin: "0px 100px",
     }
-
+    
+    if (!props.base) {
+        styles.display = "flex";
+        styles.flexDirection = "column";
+        styles.justifyContent = "center";
+        styles.alignItems = "center";
+    }
+    
     if (props.row) {
         styles.flexDirection = "row";
     }

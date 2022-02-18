@@ -1,31 +1,37 @@
 import React from "react";
+import { 
+    Link
+} from "react-router-dom";
 
-const RoundedButton = (props) => {
+const LinkButton = (props) => {
 
     const styles = {
         button: {
             cursor: "pointer",
             padding: "10px",
 
-            height: "50px",
+            height: "60px",
             borderRadius: "15px",
 
             background: "#D4D5F0",
             color: "#464BC8",
 
             display: "flex",
+            width: "180px",
             justifyContent: "center",
             alignItems: "center",
 
-            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+            textDecoration: "none",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            fontSize: "20px"
         }
     }
 
     return (
-        <div style={styles.button}>
+        <Link to={props.to} style={styles.button}>
             {props.children}
-        </div>
+        </Link>
     );
 }
 
-export default RoundedButton;
+export default LinkButton;

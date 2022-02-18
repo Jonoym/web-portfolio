@@ -28,6 +28,10 @@ const Text = (props) => {
     if (props.color) {
         styles.color = props.color;
     }
+
+    if (props.margin) {
+        styles.margin = props.margin;
+    }
     
     return (
         <div style={styles}>

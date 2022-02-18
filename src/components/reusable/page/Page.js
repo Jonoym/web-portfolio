@@ -1,9 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 
 const Page = (props) => {
     const styles = {
-        height: "100vh",
+        height: "100vh", // Remove this later and work on centering items
 
         background: "#C2C5CB",
 

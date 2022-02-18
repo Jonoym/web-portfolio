@@ -6,9 +6,9 @@ const ExperienceGallery = (props) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "100%",
+        justifyContent: "center",
         width: "100%",
-        marginTop: "250px",
+        marginTop: "200px",
     }
 
     return (

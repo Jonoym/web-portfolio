@@ -4,11 +4,12 @@ const ProjectGallery = (props) => {
 
     const style = {
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
+        flexWrap: "wrap",
         alignItems: "center",
-        height: "100%",
+        justifyContent: "center",
         width: "100%",
-        marginTop: "250px",
+        marginTop: "200px",
     }
 
     return (
