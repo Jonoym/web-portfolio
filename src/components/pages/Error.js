@@ -1,5 +1,5 @@
 import React from "react";
-import Page from "./Page";
+import Page from "../reusable/Page";
 import PageContents from "../reusable/PageContents";
 import PageHeader from "../reusable/PageHeader";
 import LinkButton from "../reusable/LinkButton";
@@ -23,9 +23,7 @@ const Error = () => {
         <Page>
             {/* Page Contents that will be passed as children components to the Page component */}
             <PageContents>
-                <PageHeader>
-                    Ooops
-                </PageHeader>
+                <PageHeader>Ooops</PageHeader>
                 <Text bold>
                     Looks like you've gotten lost.
                 </Text>

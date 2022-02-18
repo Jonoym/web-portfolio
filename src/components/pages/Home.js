@@ -1,5 +1,5 @@
 import React from "react";
-import Page from "./Page";
+import Page from "../reusable/Page";
 import PageContents from "../reusable/PageContents";
 import Text from "../reusable/Text";
 
@@ -48,8 +48,13 @@ const Home = () => {
                         Penultimate Software Engineering Student
                     </Text>
                     <div style={styles.icons}>
-                        <FaGithub style={styles.icon}/>
-                        <FaLinkedin style={styles.icon}/>
+                        <a href="https://github.com/">
+                            <FaGithub style={styles.icon}/>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <FaLinkedin style={styles.icon}/>
+                        </a>
+
                     </div>
                 </div>
                 {/* Image */}

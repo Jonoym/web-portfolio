@@ -1,9 +1,9 @@
 import React from "react";
-import Page from "./Page";
+import Page from "../reusable/Page";
 
 const About = () => {
     return (
-        <Page pageId="About"/>
+        <Page/>
     );
 }
 
