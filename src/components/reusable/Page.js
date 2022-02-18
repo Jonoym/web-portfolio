@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../reusable/NavBar";
+import NavBar from "./NavBar";
 
 const Page = (props) => {
     const styles = {
