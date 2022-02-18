@@ -1,40 +1,42 @@
 import React from "react";
 import Page from "./Page";
+import PageContents from "../reusable/PageContents";
+import PageHeader from "../reusable/PageHeader";
+import LinkButton from "../reusable/LinkButton";
+import Text from "../reusable/Text";
 
 const Error = () => {
 
     const styles = {
-        pageContents: {
-            position: "relative",
-            width: "90%",
-            height: "100%",
+        image: {
+            height: "400px",
+            width: "400px",
 
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            borderRadius: "100%",
+            background: "#10102C",
 
-            margin: "0px 100px",
-        },
-        pageHeader: {
-            position: "absolute",
-            top: "80px",
-            left: "8%",
-
-            fontSize: "50px",
-            fontWeight: "bold",
-
-            color: "#10102C",
+            margin: "30px 0px"
         }
     }
 
     return (
         <Page>
             {/* Page Contents that will be passed as children components to the Page component */}
-            <div style={styles.pageContents}>
-                <div style={styles.pageHeader}>
+            <PageContents>
+                <PageHeader>
                     Ooops
-                </div>
-            </div>
+                </PageHeader>
+                <Text emphasis>
+                    Looks like you've gotten lost.
+                </Text>
+                <Text>
+                    Even I'm not sure how you got here.
+                </Text>
+                <div style={styles.image} />
+                <LinkButton to="/">
+                    Take Me Home
+                </LinkButton>
+            </PageContents>
         </Page>
     );
 }

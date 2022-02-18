@@ -5,6 +5,8 @@ const Page = (props) => {
     const styles = {
         height: "100vh",
 
+        background: "#C2C5CB",
+
         display: "flex",
         position: "relative"
     }
