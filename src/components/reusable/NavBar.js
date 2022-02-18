@@ -8,14 +8,14 @@ const NavBar = () => {
     const styles = {
         navbarBox: {
             position: "relative",
-            width: "300px",
+            width: "250px",
             height: "100vh",
             zIndex: "0"
         },
         navbar: {
             position: "fixed",
 
-            width: "300px",
+            width: "250px",
             height: "100vh",
             background: "#DDE2E9",
 
@@ -30,16 +30,16 @@ const NavBar = () => {
         },
         homeLink: {
             textDecoration: "none",
-            fontSize: "50px",
+            fontSize: "40px",
             fontWeight: "bold",
             color: "#10102C",
         },
         link: {
             textDecoration: "none",
-            fontSize: "30px",
+            fontSize: "20px",
             color: "#3B3B50",
 
-            marginTop: "40px"
+            marginTop: "30px"
         }
     }
 

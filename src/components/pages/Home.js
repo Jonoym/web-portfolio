@@ -23,13 +23,13 @@ const Home = () => {
             alignItems: "center"
         },
         name: {
-            fontSize: "125px",
+            fontSize: "100px",
             fontWeight: "bold",
 
             color: "#10102C",
         },
         subheading: {
-            fontSize: "30px",
+            fontSize: "25px",
 
             color: "#3B3B50",
         },
@@ -43,8 +43,8 @@ const Home = () => {
             margin: "20px 15px"
         },
         image: {
-            height: "600px",
-            width: "600px",
+            height: "400px",
+            width: "400px",
             marginLeft: "100px",
 
             borderRadius: "100%",
