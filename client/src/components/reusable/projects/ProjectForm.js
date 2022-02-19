@@ -5,6 +5,9 @@ import Input from "../input/Input";
 import TextArea from "../input/TextArea";
 import { FaPaperPlane } from "react-icons/fa";
 
+import { useDispatch } from "react-redux";
+import { createProject } from "../../../actions/projects";
+
 const ProjectForm = () => {
 
     const [projectData, setProjectData] = useState({
@@ -13,8 +16,9 @@ const ProjectForm = () => {
         text: "",
         tags: "",
         summary: "",
-        image: ""
     });
+
+    const dispatch = useDispatch();
 
     const styles = {
         form: {
@@ -29,8 +33,11 @@ const ProjectForm = () => {
         }
     }
 
-    const onSubmit = () => {
-        console.log("here");
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        console.log(projectData);
+        dispatch(createProject(projectData))
     }
 
     return (
@@ -39,8 +46,8 @@ const ProjectForm = () => {
             <Input name="title" label="Title" value={projectData} onChange={(e) => setProjectData({ ...projectData, title: e.target.value })}/>
             <Input name="date" label="Date" value={projectData} onChange={(e) => setProjectData({ ...projectData, date: e.target.value })}/>
             <Input name="tags" label="Tags" value={projectData} onChange={(e) => setProjectData({ ...projectData, tags: e.target.value })}/>
-            <TextArea name="summary" label="Summary" value={projectData} onChange={(e) => setProjectData({ ...projectData, summary: e.target.value })} height="200px">Message</TextArea>
-            <RoundedButton onSubmit={onSubmit} ><FaPaperPlane style={styles.icon}/></RoundedButton>
+            <TextArea name="text" label="Text" value={projectData} onChange={(e) => setProjectData({ ...projectData, text: e.target.value })} height="200px"></TextArea>
+            <RoundedButton onClick={onSubmit} ><FaPaperPlane style={styles.icon}/></RoundedButton>
         </form>
     );
 }

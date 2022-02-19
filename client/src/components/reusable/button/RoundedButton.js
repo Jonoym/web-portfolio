@@ -25,7 +25,7 @@ const RoundedButton = (props) => {
     }
 
     return (
-        <div onClick={props.onSubmit} style={styles.button}>
+        <div onClick={props.onClick} style={styles.button}>
             {props.children}
         </div>
     );

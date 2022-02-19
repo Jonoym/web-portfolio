@@ -4,7 +4,6 @@ import Page from "../reusable/page/Page";
 import PageContents from "../reusable/page/PageContents";
 import PageHeader from "../reusable/page/PageHeader";
 
-import ProjectCard from "../reusable/projects/ProjectCard";
 import ProjectGallery from "../reusable/projects/ProjectGallery";
 import ProjectForm from "../reusable/projects/ProjectForm";
 
@@ -20,7 +19,6 @@ const Projects = () => {
             <PageContents base>
                 <PageHeader>Projects</PageHeader>
                 <ProjectGallery>
-                    <ProjectCard />
                 </ProjectGallery>
                 <ProjectForm />
             </PageContents>

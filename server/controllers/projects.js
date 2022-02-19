@@ -1,10 +1,9 @@
+import mongoose from "mongoose";
 import ProjectMessage from "../models/projectMessage.js";
 
 export const getProjects = async (request, response) => {
     try {
         const projectMessages = await ProjectMessage.find()
-
-        console.log(projectMessages);
 
         response.status(200).json(projectMessages);
     } catch (error) {
@@ -28,4 +27,19 @@ export const createProject = async (request, response) => {
             message: error.message
         })
     }
+};
+
+export const deleteProject = async (request, response) => {
+
+    const { id } = request.params;
+    
+    if (!mongoose.Types.ObjectId.isValid(id)) return response.status(404).send("No post with that id");
+    
+    await ProjectMessage.findByIdAndRemove(id);
+
+    console.log("DELETE");
+
+    response.json({
+        message: "Post deleted successfully"
+    })
 };

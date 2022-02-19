@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getProjects } from "../../../actions/projects";
 
+import ProjectCard from "./ProjectCard";
+
 const ProjectGallery = (props) => {
 
     const dispatch = useDispatch();
@@ -14,20 +16,22 @@ const ProjectGallery = (props) => {
 
     const projects = useSelector((state) => state.projects);
 
-    console.log(projects);
-
     const style = {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
-        // justifyContent: "center",
         marginTop: "200px",
     }
 
     return (
+
         <div style={style}>
-            {props.children}
+            {projects.map((project) => {
+                return (
+                    <ProjectCard details={project}/>
+                );
+            })}
         </div>
     );
 }

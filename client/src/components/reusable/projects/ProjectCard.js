@@ -1,12 +1,18 @@
 import React from "react";
 import Text from "../Text";
 
-import Location from "../icons/Location";
+import { useDispatch } from "react-redux";
+
+import { deleteProject } from "../../../actions/projects";
+
 import Date from "../icons/Date";
 import Tag from "../Tag";
 import Tags from "../Tags";
+import RoundedButton from "../button/RoundedButton";
 
-const ProjectCard = () => {
+const ProjectCard = ({ details }) => {
+
+    const dispatch = useDispatch();
 
     const styles = {
         card: {
@@ -20,6 +26,7 @@ const ProjectCard = () => {
     
             margin: "0px 0px 40px 40px",
     
+            position: "relative",
             display: "flex",
             flexDirection: "column"
         },
@@ -50,6 +57,10 @@ const ProjectCard = () => {
         }
     }
 
+    const getTags = (tags) => {
+        return tags[0].split(", ");
+    }
+
     return (
         <div style={styles.card}>
             <div style={styles.preview}>
@@ -57,17 +68,19 @@ const ProjectCard = () => {
             </div>
 
             <div style={styles.information}>
-                <Text bold size="30" dark>Software Engineering Intern</Text>
-                <Date>Nov 2021 - Present</Date>
-                <Text light size="18">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
-                </Text>
+                <Text bold size="30" dark>{details.title}</Text>
+                <Date>{details.date}</Date>
+                <Text light size="18">{details.text}</Text>
                 <Tags>
-                    <Tag>Programming</Tag>
-                    <Tag>React</Tag>
-                    <Tag>React Native</Tag>
-                    <Tag>Firebase</Tag>
+                    {
+                        getTags(details.tags).map((tag) => {
+                            return (
+                                <Tag>{tag}</Tag>
+                            );
+                        })
+                    }
                 </Tags>
+                <RoundedButton onClick={() => dispatch(deleteProject(details._id))}>Delete</RoundedButton>
             </div>
         </div>
     );

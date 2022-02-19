@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const pprojectSchema = mongoose.Schema({
+const projectSchema = mongoose.Schema({
     title: String,
     date: String,
     text: String,
@@ -16,6 +16,6 @@ const pprojectSchema = mongoose.Schema({
     }
 });
 
-const ProjectMessage = mongoose.model("ProjectMessage", pprojectSchema)
+const ProjectMessage = mongoose.model("ProjectMessage", projectSchema)
 
 export default ProjectMessage;
