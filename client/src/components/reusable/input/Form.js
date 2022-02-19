@@ -22,9 +22,9 @@ const Form = () => {
 
     return (
         <form style={styles.form}>
-            <Input>Name</Input>
-            <Input>Email</Input>
-            <TextArea height="200px">Message</TextArea>
+            <Input label="Name"></Input>
+            <Input label="Email"></Input>
+            <TextArea label="Message" height="200px"></TextArea>
             <RoundedButton><FaPaperPlane style={styles.icon}/></RoundedButton>
         </form>
     );

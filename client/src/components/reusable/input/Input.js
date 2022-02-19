@@ -16,7 +16,7 @@ const Input = (props) => {
     }
 
     return (
-        <input type="text" placeholder={props.children} style={style} />
+        <input type="text" placeholder={props.label} style={style} />
     );
 }
 

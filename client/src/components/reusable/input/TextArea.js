@@ -18,7 +18,7 @@ const TextArea = (props) => {
     }
 
     return (
-        <textarea type="text" placeholder={props.children} style={style} />
+        <textarea type="text" placeholder={props.label} style={style} />
     );
 }
 
