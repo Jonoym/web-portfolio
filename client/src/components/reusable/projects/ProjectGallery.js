@@ -29,7 +29,7 @@ const ProjectGallery = (props) => {
         <div style={style}>
             {projects.map((project) => {
                 return (
-                    <ProjectCard details={project}/>
+                    <ProjectCard key={project._id} details={project}/>
                 );
             })}
         </div>

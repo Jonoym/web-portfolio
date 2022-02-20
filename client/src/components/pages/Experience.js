@@ -4,7 +4,7 @@ import PageContents from "../reusable/page/PageContents";
 import PageHeader from "../reusable/page/PageHeader";
 
 import ExperienceGallery from "../reusable/experience/ExperienceGallery";
-import ExperienceCard from "../reusable/experience/ExperienceCard";
+import ExperienceForm from "../reusable/experience/ExperienceForm";
 
 const Experience = () => {
 
@@ -17,10 +17,7 @@ const Experience = () => {
             {/* Page Contents that will be passed as children components to the Page component */}
             <PageContents base>
                 <PageHeader>Experience</PageHeader>
-                <ExperienceGallery>
-                    <ExperienceCard />
-                    <ExperienceCard />
-                </ExperienceGallery>
+                <ExperienceGallery />
             </PageContents>
         </Page>
     );

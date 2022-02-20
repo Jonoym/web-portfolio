@@ -10,6 +10,10 @@ const Page = (props) => {
         position: "relative"
     }
 
+    if (props.col) {
+        styles.flexDirection = "column";
+    }
+
     return (
         <div style = {styles}>
             <NavBar />

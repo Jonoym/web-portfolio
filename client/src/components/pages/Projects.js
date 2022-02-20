@@ -18,9 +18,7 @@ const Projects = () => {
             {/* Page Contents that will be passed as children components to the Page component */}
             <PageContents base>
                 <PageHeader>Projects</PageHeader>
-                <ProjectGallery>
-                </ProjectGallery>
-                <ProjectForm />
+                <ProjectGallery />
             </PageContents>
         </Page>
     );

@@ -75,7 +75,7 @@ const ProjectCard = ({ details }) => {
                     {
                         getTags(details.tags).map((tag) => {
                             return (
-                                <Tag>{tag}</Tag>
+                                <Tag key={tag}>{tag}</Tag>
                             );
                         })
                     }

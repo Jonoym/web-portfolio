@@ -3,7 +3,7 @@ import RoundedButton from "../button/RoundedButton";
 
 import Input from "../input/Input";
 import TextArea from "../input/TextArea";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPenAlt } from "react-icons/fa";
 
 import { useDispatch } from "react-redux";
 import { createProject } from "../../../actions/projects";
@@ -42,12 +42,11 @@ const ProjectForm = () => {
 
     return (
         <form style={styles.form}>
-            <Input name="creator" label="Creator" value={projectData} onChange={(e) => setProjectData({ ...projectData, creator: e.target.value })}/>
             <Input name="title" label="Title" value={projectData} onChange={(e) => setProjectData({ ...projectData, title: e.target.value })}/>
             <Input name="date" label="Date" value={projectData} onChange={(e) => setProjectData({ ...projectData, date: e.target.value })}/>
             <Input name="tags" label="Tags" value={projectData} onChange={(e) => setProjectData({ ...projectData, tags: e.target.value })}/>
             <TextArea name="text" label="Text" value={projectData} onChange={(e) => setProjectData({ ...projectData, text: e.target.value })} height="200px"></TextArea>
-            <RoundedButton onClick={onSubmit} ><FaPaperPlane style={styles.icon}/></RoundedButton>
+            <RoundedButton onClick={onSubmit} ><FaPenAlt style={styles.icon}/></RoundedButton>
         </form>
     );
 }

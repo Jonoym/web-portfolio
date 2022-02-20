@@ -52,6 +52,7 @@ const NavBar = () => {
                     <Link to="/experience" style={styles.link}>Experience</Link>
                     <Link to="/projects" style={styles.link}>Projects</Link>
                     <Link to="/contact" style={styles.link}>Contact</Link>
+                    <Link to="/create" style={styles.link}>Create</Link>
                     <Link to="/error" style={styles.link}>Error</Link>
                 </div>
             </div>

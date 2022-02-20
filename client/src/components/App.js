@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Create from "./pages/Create";
 import Error from "./pages/Error";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
                 <Route path="experience" element={<Experience />} /> 
                 <Route path="projects" element={<Projects />} /> 
                 <Route path="contact" element={<Contact />} /> 
+                <Route path="create" element={<Create />} /> 
                 <Route path="*" element={<Error />} /> 
             </Routes>
         </BrowserRouter>

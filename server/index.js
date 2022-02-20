@@ -3,6 +3,9 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
+// Replace with your own environment variables, dotenv is not working. 
+import { PORT, CONNECTION_URL } from "./environment.js";
+
 import projectRoutes from "./routes/projects.js";
 import experienceRoutes from "./routes/experience.js";
 
@@ -15,9 +18,6 @@ app.use(cors());
 app.use("/projects", projectRoutes);
 app.use("/experience", experienceRoutes);
 
-const CONNECTION_URL = "mongodb+srv://jonoym:bIdBbzvUwTztUtAo@webportfolio.8zrd4.mongodb.net/WebPortfolio?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 5000;
-
 mongoose.connect(CONNECTION_URL, { useNewURLParser: true, useUnifiedTopology: true})
-    .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
+    .then(() => app.listen(PORT || 5000, () => console.log(`Server running on port: ${PORT}`)))
     .catch((error) => console.log(error.message));

@@ -6,7 +6,7 @@ import Date from "../icons/Date";
 import Tag from "../Tag";
 import Tags from "../Tags";
 
-const ExperienceCard = () => {
+const ExperienceCard = ({ details }) => {
 
     const styles = {
         card: {
@@ -52,26 +52,31 @@ const ExperienceCard = () => {
         }
     }
 
+    const getTags = (tags) => {
+        return tags[0].split(", ");
+    }
+
     return (
         <div style={styles.card}>
             <div style={styles.information}>
-                <Text bold size="30" dark>Software Engineering Intern</Text>
-                <Text light size="20">University Of Auckland</Text>
-                <Date>Nov 2021 - Present</Date>
-                <Location>Auckland, NZ</Location>
+                <Text bold size="30" dark>{details.role}</Text>
+                <Text light size="20">{details.employer}</Text>
+                <Date>{details.date}</Date>
+                <Location>{details.location}</Location>
             </div>
             <div style={styles.divider}>
                 <div style={styles.line} />
             </div>
             <div style={styles.summary}>
-                <Text light size="18">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </Text>
+                <Text light size="18">{details.text}</Text>
                 <Tags>
-                    <Tag>Programming</Tag>
-                    <Tag>React</Tag>
-                    <Tag>React Native</Tag>
-                    <Tag>Firebase</Tag>
+                    {
+                        getTags(details.tags).map((tag) => {
+                            return (
+                                <Tag key={tag}>{tag}</Tag>
+                            );
+                        })
+                    }
                 </Tags>
             </div>
         </div>
