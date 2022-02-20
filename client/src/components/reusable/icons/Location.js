@@ -1,27 +1,14 @@
 import React from "react";
 import { FaMapMarkedAlt } from "react-icons/fa";
-import Text from "../Text";
+import Text from "../text/Text";
 
+import styles from "./icon.module.css";
 
 const Location = (props) => {
 
-    const styles = {
-        locations: {
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-        },
-        icon: {
-            fontSize: "20px",
-            marginRight: "10px",
-            color: "#878BED"
-        },
-
-    }
-
     return (
-        <div style={styles.locations}>
-            <FaMapMarkedAlt style={styles.icon}/>
+        <div className={styles.iconContainer}>
+            <FaMapMarkedAlt className={styles.smallIcon}/>
             <Text light size="14">{props.children}</Text>
         </div>
     );

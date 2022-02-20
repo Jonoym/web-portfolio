@@ -1,30 +1,46 @@
 import React from "react";
-import Text from "../Text";
+import Text from "../reusable/text/Text";
 
-import Location from "../icons/Location";
-import Date from "../icons/Date";
-import Tag from "../Tag";
-import Tags from "../Tags";
+import { useDispatch } from "react-redux";
 
-const ExperienceCard = ({ details }) => {
+import { deleteProject } from "../../actions/projects";
+
+import Date from "../reusable/icons/Date";
+import Tag from "../reusable/tags/Tag";
+import Tags from "../reusable/tags/Tags";
+import RoundedButton from "../reusable/button/RoundedButton";
+
+const ProjectCard = ({ details }) => {
+
+    const dispatch = useDispatch();
 
     const styles = {
         card: {
-            width: "75%",
-            minHeight: "230px",
-            maxHeight: "230px",
+            width: "450px",
+            minHeight: "600px",
+            maxHeight: "600px",
             background: "#DDE2E9",
     
             borderRadius: "20px",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     
-            marginBottom: "40px",
+            margin: "0px 0px 40px 40px",
     
+            position: "relative",
             display: "flex",
-            flexDirection: "row"
+            flexDirection: "column"
+        },
+        preview: {
+            height: "225px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignContent: "left",
+    
+            padding: "40px",
         },
         information: {
-            width: "28%",
+            height: "50%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -32,22 +48,11 @@ const ExperienceCard = ({ details }) => {
 
             padding: "40px"
         },
-        divider: {
-            width: "5%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-        },
-        line: {
-            height: "80%",
-            width: "1px",
-            background: "#C2C5CB"
-        },
         summary: {
-            width: "70%",
+            width: "50%",
             display: "flex",
             flexDirection: "column",    
-            justifyContent: "center",
+            justifyContent: "space-evenly",
             padding: "40px"
         }
     }
@@ -58,16 +63,13 @@ const ExperienceCard = ({ details }) => {
 
     return (
         <div style={styles.card}>
+            <div style={styles.preview}>
+                
+            </div>
+
             <div style={styles.information}>
-                <Text bold size="30" dark>{details.role}</Text>
-                <Text light size="20">{details.employer}</Text>
+                <Text bold size="30" dark>{details.title}</Text>
                 <Date>{details.date}</Date>
-                <Location>{details.location}</Location>
-            </div>
-            <div style={styles.divider}>
-                <div style={styles.line} />
-            </div>
-            <div style={styles.summary}>
                 <Text light size="18">{details.text}</Text>
                 <Tags>
                     {
@@ -78,9 +80,10 @@ const ExperienceCard = ({ details }) => {
                         })
                     }
                 </Tags>
+                <RoundedButton onClick={() => dispatch(deleteProject(details._id))}>Delete</RoundedButton>
             </div>
         </div>
     );
 }
 
-export default ExperienceCard;
+export default ProjectCard;

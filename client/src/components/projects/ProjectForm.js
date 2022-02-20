@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import RoundedButton from "../button/RoundedButton";
+import RoundedButton from "../reusable/button/RoundedButton";
 
-import Input from "../input/Input";
-import TextArea from "../input/TextArea";
+import Input from "../reusable/input/Input";
+import TextArea from "../reusable/input/TextArea";
 import { FaPenAlt } from "react-icons/fa";
 
 import { useDispatch } from "react-redux";
-import { createProject } from "../../../actions/projects";
+import { createProject } from "../../actions/projects";
 
 const ProjectForm = () => {
 
@@ -36,7 +36,6 @@ const ProjectForm = () => {
     const onSubmit = (e) => {
         e.preventDefault()
 
-        console.log(projectData);
         dispatch(createProject(projectData))
     }
 

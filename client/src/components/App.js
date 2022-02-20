@@ -6,13 +6,13 @@ import {
 } from "react-router-dom";
 
 import "./styles.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Create from "./pages/Create";
-import Error from "./pages/Error";
+import Home from "./home/Home";
+import About from "./about/About";
+import Experience from "./experience/Experience";
+import Projects from "./projects/Projects";
+import Contact from "./contact/Contact";
+import Create from "./create/Create";
+import Error from "./error/Error";
 
 const App = () => {
 

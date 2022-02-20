@@ -1,28 +1,14 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
-import Text from "../Text";
+import Text from "../text/Text";
 
+import styles from "./icon.module.css";
 
 const Date = (props) => {
 
-    const styles = {
-        locations: {
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            margin: "10px 0px"
-        },
-        icon: {
-            fontSize: "20px",
-            marginRight: "10px",
-            color: "#878BED"
-        },
-
-    }
-
     return (
-        <div style={styles.locations}>
-            <FaCalendarAlt style={styles.icon}/>
+        <div className={`${styles.iconContainer} ${styles.date}`}>
+            <FaCalendarAlt className={styles.smallIcon}/>
             <Text light size="14">{props.children}</Text>
         </div>
     );

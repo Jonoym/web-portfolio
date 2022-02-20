@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { useDispatch } from "react-redux";
-import { getProjects } from "../../../actions/projects";
+import { getProjects } from "../../actions/projects";
 
 import ProjectCard from "./ProjectCard";
 

@@ -1,10 +1,9 @@
 import React from "react";
-import Page from "../reusable/page/Page";
-import PageContents from "../reusable/page/PageContents";
-import PageHeader from "../reusable/page/PageHeader";
+import Page from "../page/Page";
+import PageContents from "../page/PageContents";
+import PageHeader from "../page/PageHeader";
 
-import ExperienceGallery from "../reusable/experience/ExperienceGallery";
-import ExperienceForm from "../reusable/experience/ExperienceForm";
+import ExperienceGallery from "./ExperienceGallery";
 
 const Experience = () => {
 

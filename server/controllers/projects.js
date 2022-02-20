@@ -37,8 +37,6 @@ export const deleteProject = async (request, response) => {
     
     await ProjectMessage.findByIdAndRemove(id);
 
-    console.log("DELETE");
-
     response.json({
         message: "Post deleted successfully"
     })
