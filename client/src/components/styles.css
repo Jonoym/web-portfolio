@@ -1,27 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
 
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
-}
-
-.dark {
-    color: red;
-}
-
-.background-light {
-    background: #C2C5CB;
+    font-family: 'Roboto', serif;
+    transition: all 0.5s ease;
 }
 
 .background-dark {
-    background: #10102C;
+    background: #0E1226;
 }
 
-.header-light {
-    color: #10102C;
+.containerOpaque-dark {
+    background: #2C2C40;
 }
 
-.header-dark {
-    color: #C2C5CB;
+.containerOpaque-light {
+    background: #2C2C40;
+}
+
+.active-page {
+    opacity: 100%;
+}
+
+.inactive-page {
+    opacity: 0%;
+}
+
+.headerText {
+    font-size: 70px;
+    text-align: left;
+}
+
+.subheaderText {
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: left;
+
+    transition: all 0.5s ease;
+}
+
+.headerText-dark {
+    color: #FFFFFF;
+}
+
+.headerText-light {
+    color: #0E1226;
+}
+
+.subheaderText-dark {
+    color: #BBBBBB;
+}
+
+.subheaderText-light {
+    color: #333333;
+}
+
+.active-dark {
+    font-weight: bold;
+    color: #BDADEA;
+}
+
+.active-light {
+    color: #BDADEA;
+}
+
+.inactive-dark {
+    color: #BBBBBB;
+}
+
+.inactive-light {
+    color: #BBBBBB;
+}
+
+.inactive-dark:hover {
+    color: #BDADEA;
+}
+
+.inactive-light:hover {
+    color: #BDADEA;
+}
+
+.opacityOff {
+    opacity: 0%;
+    transition: all 1s ease;
+}
+
+.opacity {
+    opacity: 100%;
 }

@@ -1,30 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import "../styles.css";
-import styles from "./page.module.css";
-import NavBar from "../NavBar";
 
-const Page = (props) => {
+import styles from "./page.module.css";
+import "../styles.css";
+
+import NavBar from "./navbar/NavBar";
+import LinksBar from "./linksbar/LinksBar";
+
+const Page = ({ path, children}) => {
+
+    const [active, setActive] = useState(false);
 
     const theme = useSelector((state) => {
         return state.theme
     });
 
-    // const styles = {
-    //     background: "#C2C5CB",
+    useEffect(() => {
+        setActive(true);
+    })
 
-    //     display: "flex",
-    //     position: "relative"
-    // }
-
-    // if (props.col) {
-    //     styles.flexDirection = "column";
-    // }
+    const getActivePage = () => {
+        if (active) {
+            return "opacity";
+        } else {
+            return ""
+        }
+    }
 
     return (
-        <div className={`${styles.page} background-${theme}`}>
+        <div className={`background-${theme} ${styles.page}`}>
+            <div className={`${styles.page} opacityOff ${getActivePage()}`}>
+                {children}
+            </div>
             <NavBar />
-            {props.children}
+            <LinksBar />
         </div>
     );
 }

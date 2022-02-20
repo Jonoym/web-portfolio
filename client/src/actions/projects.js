@@ -28,7 +28,6 @@ export const createProject = (project) => async (dispatch) => {
 }
 
 export const deleteProject = (id) => async (dispatch) => {
-
     try {
         await api.deleteProject(id);
 
