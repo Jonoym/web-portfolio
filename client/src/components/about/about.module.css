@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contents {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.image {
+    width: 400px;
+    height: 500px;
+
+    background: #BBBBBB;
+}
+
+.about {
+    margin-left: 20px;
+}
+
+.aboutContent {
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.locations {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 5px;
+}
+
+.icon {
+    margin-right: 10px;
+    transition: all 0.1s ease;
+}
+
+.spaced {
+    margin: 0px 4px;
+}
+
+.listItem {
+    margin-bottom: 3px;
+    transition: all 0.1s ease;
+}
+
+.headerText {
+    font-size: 50px;
+}
+
+.closingText {
+    font-size: 40px;
+}

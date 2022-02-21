@@ -1,0 +1,25 @@
+.smallIcon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #878BED;
+}
+
+.icon {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #10102C;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.date {
+    margin: 10px 0px;
+}
+
+.email {
+    margin-bottom: 40px;
+}
