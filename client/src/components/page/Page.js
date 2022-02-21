@@ -6,6 +6,7 @@ import "../styles.css";
 
 import NavBar from "./navbar/NavBar";
 import LinksBar from "./linksbar/LinksBar";
+import Footer from "./footer/Footer";
 
 const Page = ({ path, children}) => {
 
@@ -17,7 +18,7 @@ const Page = ({ path, children}) => {
 
     useEffect(() => {
         setActive(true);
-    })
+    }, [active])
 
     const getActivePage = () => {
         if (active) {
@@ -34,6 +35,7 @@ const Page = ({ path, children}) => {
             </div>
             <NavBar />
             <LinksBar />
+            <Footer />
         </div>
     );
 }

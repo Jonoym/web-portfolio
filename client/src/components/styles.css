@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 * {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', serif;
-    transition: all 0.5s ease;
 }
 
 .background-dark {
     background: #0E1226;
+}
+
+.background-light {
+    background: #EFEFEF;
 }
 
 .containerOpaque-dark {
@@ -19,26 +22,39 @@
     background: #2C2C40;
 }
 
-.active-page {
-    opacity: 100%;
+.opacityOff {
+    opacity: 0%;
+    transition: all 1s ease;
 }
 
-.inactive-page {
-    opacity: 0%;
+.opacity {
+    opacity: 100%;
 }
 
 .headerText {
     font-size: 70px;
     text-align: left;
+    transition: all 0.3s ease;
 }
 
 .subheaderText {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
-    font-style: italic;
     text-align: left;
+}
 
-    transition: all 0.5s ease;
+.text {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 500;
 }
 
 .headerText-dark {
@@ -50,7 +66,7 @@
 }
 
 .subheaderText-dark {
-    color: #BBBBBB;
+    color: #CCCCCC;
 }
 
 .subheaderText-light {
@@ -58,7 +74,6 @@
 }
 
 .active-dark {
-    font-weight: bold;
     color: #BDADEA;
 }
 
@@ -82,11 +97,78 @@
     color: #BDADEA;
 }
 
-.opacityOff {
-    opacity: 0%;
-    transition: all 1s ease;
+.icon-dark {
+    color: #BDADEA;
 }
 
-.opacity {
-    opacity: 100%;
+.icon-light {
+    color: #0E1226;
+}
+
+
+/* PROJECT AND EXPERIENCE CARDS */
+
+.cardBar-dark {
+    border-bottom: 2px solid;
+    border-color: #BDADEA;
+}
+
+.cardBar-light {
+    border-bottom: 2px solid;
+    border-color: #0E1226;
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0) translateY(2px);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline-dark:after {
+    background-color: #BDADEA;
+}
+
+.underline-light:after {
+    background-color: #0E1226;
+}
+
+.underline:hover:after {
+    transform: scaleX(1) translateY(2px);
+    transform-origin: bottom left;
+}
+
+/* TAG AND TAG TEXT THEMES */
+
+.tag-dark {
+    color: #BDADEA;
+    border: 1px solid #BDADEA;
+}
+
+.tag-light {
+    color: #0E1226;
+    border: 1px solid #0E1226;
+}
+
+.tag-main-dark {
+    color: #0E1226;
+    background: #BDADEA;
+    border: 1px solid #BDADEA;
+}
+
+.tag-main-light {
+    color: #FFFFFF;
+    background: #0E1226;
+    border: 1px solid #0E1226;
 }
