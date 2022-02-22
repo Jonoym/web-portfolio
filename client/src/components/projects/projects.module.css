@@ -15,8 +15,7 @@
     width: 80vw;
     padding-right: 20vw;
     padding-left: 2vw;
-    margin-top: 200px;
-    margin-bottom: 60px;
+    margin-top: 150px;
 
     font-size: 50px;
     z-index: 0;
@@ -100,7 +99,7 @@
     position: absolute;
     width: 400px;
     height: 250px;
-    background: #BDADEA;
+    background: #ADCDEA;
     transform: translate(30px, 30px);
 }
 

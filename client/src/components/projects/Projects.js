@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProjects } from "../../actions/projects";
 
 import Page from "../page/Page";
-import ExperieceCard from "./ProjectCard";
 
 import styles from "./projects.module.css";
 import "../styles.css";

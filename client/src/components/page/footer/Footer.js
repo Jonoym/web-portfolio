@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <div className={`${styles.footerBar}`}>
-            <div className={`${styles.footer} subheaderText-${theme}`}>
+            <div className={`${styles.footer} subheaderText-${theme} text`}>
                 @2022 coded and designed by jonoym
             </div>
         </div>
