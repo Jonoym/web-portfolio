@@ -10,15 +10,11 @@ import "../../styles.css";
 
 const NavBar = () => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     const dispatch = useDispatch();
 
-    const onClick = () => {
-        dispatch(switchTheme(theme));
-    }
+    const onClick = () => dispatch(switchTheme(theme));
 
     const getIcon = () => {
         if (theme === "dark") {

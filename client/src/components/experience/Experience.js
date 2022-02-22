@@ -1,5 +1,6 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getExperience } from "../../actions/experience";
 
 import Page from "../page/Page";
 import ExperieceCard from "./ExperieceCard";
@@ -9,9 +10,15 @@ import "../styles.css";
 
 const Experience = () => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getExperience())
+    }, [dispatch])
+
+    const theme = useSelector((state) => state.theme);
+
+    const experience = useSelector((state) => state.experience);
 
     return (
         <Page path="/">
@@ -21,6 +28,9 @@ const Experience = () => {
                     <ExperieceCard />
                     <ExperieceCard />
                     <ExperieceCard />
+                    {/* {experience.map((experience) => {
+                        return <ExperieceCard key={experience._id} details={experience} />
+                    })} */}
                 </div>
             </div>
         </Page>

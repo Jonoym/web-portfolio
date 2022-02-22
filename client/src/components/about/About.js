@@ -10,9 +10,7 @@ import "../styles.css";
 
 const About = () => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     return (
         <Page path="/about">

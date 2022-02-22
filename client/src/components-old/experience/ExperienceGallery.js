@@ -28,7 +28,7 @@ const ExperienceGallery = (props) => {
     return (
         <div style={style}>
             {experience.map((experience) => {
-                return <ExperienceCard key= {experience._id} details={experience} />
+                return <ExperienceCard key={experience._id} details={experience} />
             })}
         </div>
     );

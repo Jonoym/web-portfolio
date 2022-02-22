@@ -2,17 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 
-import Page from "../page/Page";
-
 import styles from "./experience.module.css";
 import "../styles.css";
 import Tags from "../page/tags/Tags";
 
 const Experience = () => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.card} cardBar-${theme}`}>

@@ -5,9 +5,8 @@ import styles from "./footer.module.css";
 import "../../styles.css"
 
 const Footer = () => {
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.footerBar}`}>

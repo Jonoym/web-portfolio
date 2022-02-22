@@ -6,9 +6,7 @@ import "../../styles.css";
 
 const Tag = ({ children, main }) => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.tag} tag-${theme} text bold tag-${main}-${theme}`}>{children}</div>

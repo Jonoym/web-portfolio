@@ -7,10 +7,8 @@ import styles from "./linksbar.module.css";
 import "../../styles.css";
 
 const LinksBar = () => {
-
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.linksbar} containerOpaque-${theme}`}>
