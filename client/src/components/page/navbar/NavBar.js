@@ -42,7 +42,6 @@ const NavBar = () => {
                 <Link to="/experience" className={`${styles.link} ${getActivePage("/experience")}-${theme}`}>experience</Link>
                 <Link to="/projects" className={`${styles.link} ${getActivePage("/projects")}-${theme}`}>projects</Link>
                 <Link to="/contact" className={`${styles.link} ${getActivePage("/contact")}-${theme}`}>contact</Link>
-                <Link to="/create" className={`${styles.link} ${getActivePage("/create")}-${theme}`}>create</Link>
                 {getIcon()}
                 </div>
         </div>
