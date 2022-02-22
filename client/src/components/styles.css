@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
+:root {
+    --light-purple: #BDADEA;
+    --dark-blue: #0E1226;
+    --grey-blue: #2C2C40;
+    --white: #EFEFEF;
+    --off-white: #CCCCCC;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -7,19 +15,19 @@
 }
 
 .background-dark {
-    background: #0E1226;
+    background: var(--dark-blue);
 }
 
 .background-light {
-    background: #EFEFEF;
+    background: var(--white);
 }
 
 .containerOpaque-dark {
-    background: #2C2C40;
+    background: var(--grey-blue);
 }
 
 .containerOpaque-light {
-    background: #2C2C40;
+    background: var(--grey-blue);
 }
 
 .opacityOff {
@@ -41,12 +49,14 @@
     font-size: 20px;
     font-weight: 300;
     text-align: left;
+    transition: all 0.3s ease;
 }
 
 .text {
     font-size: 16px;
     font-weight: 300;
     text-align: left;
+    transition: all 0.3s ease;
 }
 
 .italics {
@@ -55,54 +65,55 @@
 
 .bold {
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .headerText-dark {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .headerText-light {
-    color: #0E1226;
+    color: var(--dark-blue);
 }
 
 .subheaderText-dark {
-    color: #CCCCCC;
+    color: var(--off-white);
 }
 
 .subheaderText-light {
-    color: #333333;
+    color: var(--grey-blue);
 }
 
 .active-dark {
-    color: #BDADEA;
+    color: var(--light-purple);
 }
 
 .active-light {
-    color: #BDADEA;
+    color: var(--light-purple);
 }
 
 .inactive-dark {
-    color: #BBBBBB;
+    color: var(--off-white);
 }
 
 .inactive-light {
-    color: #BBBBBB;
+    color: var(--off-white);
 }
 
 .inactive-dark:hover {
-    color: #BDADEA;
+    color: var(--light-purple);
 }
 
 .inactive-light:hover {
-    color: #BDADEA;
+    color: var(--light-purple);
 }
 
 .icon-dark {
-    color: #BDADEA;
+    color: var(--light-purple);
 }
 
 .icon-light {
-    color: #0E1226;
+    color: var(--grey-blue);
 }
 
 
@@ -110,12 +121,12 @@
 
 .cardBar-dark {
     border-bottom: 2px solid;
-    border-color: #BDADEA;
+    border-color: var(--light-purple);
 }
 
 .cardBar-light {
     border-bottom: 2px solid;
-    border-color: #0E1226;
+    border-color: var(--dark-blue);
 }
 
 .underline {
@@ -137,11 +148,11 @@
 }
 
 .underline-dark:after {
-    background-color: #BDADEA;
+    background-color: var(--light-purple);
 }
 
 .underline-light:after {
-    background-color: #0E1226;
+    background-color: var(--dark-blue);
 }
 
 .underline:hover:after {
@@ -152,23 +163,23 @@
 /* TAG AND TAG TEXT THEMES */
 
 .tag-dark {
-    color: #BDADEA;
-    border: 1px solid #BDADEA;
+    color: var(--light-purple);
+    border: 1px solid var(--light-purple);
 }
 
 .tag-light {
-    color: #0E1226;
-    border: 1px solid #0E1226;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
 }
 
 .tag-main-dark {
-    color: #0E1226;
-    background: #BDADEA;
-    border: 1px solid #BDADEA;
+    color: var(--dark-blue);
+    background: var(--light-purple);
+    border: 1px solid var(--light-purple);
 }
 
 .tag-main-light {
-    color: #FFFFFF;
-    background: #0E1226;
-    border: 1px solid #0E1226;
+    color: var(--white);
+    background: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
 }

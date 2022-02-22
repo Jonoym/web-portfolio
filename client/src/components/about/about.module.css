@@ -8,7 +8,7 @@
 
 .contents {
     position: relative;
-    height: 90vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,8 +27,9 @@
 }
 
 .aboutContent {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     max-width: 600px;
+    transition: all 0.3s ease;
 }
 
 .locations {
@@ -40,22 +41,25 @@
 
 .icon {
     margin-right: 10px;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
 }
 
 .spaced {
     margin: 0px 4px;
+    transition: all 0.3s ease;
 }
 
-.listItem {
+.listHeader, .listItem {
     margin-bottom: 3px;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
 }
 
 .headerText {
     font-size: 50px;
+    transition: all 0.3s ease;
 }
 
 .closingText {
     font-size: 40px;
+    transition: all 0.3s ease;
 }

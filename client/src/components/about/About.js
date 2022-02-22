@@ -37,26 +37,28 @@ const About = () => {
                         <div className={`${styles.aboutContent} text subheaderText-${theme} bold`}>
                             I'm a developer pursuing a degree in Software Engineering at the University of Queensland.
                         </div>
-                        <div className={`${styles.aboutContent} text subheaderText-${theme} bold`}>
-                        <div className={styles.listItem}>
-                                Some things that I've been up to recently include:
-                            </div>
-                            <ul>
-                                <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
-                                    Developing games and immersing myself in Virtual Reality Environments.
-                                </li>
-                                <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
-                                    Swinging my arms around like a maniac while playing BeatSaber.
-                                </li>
-                                <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
-                                    Telling myself that I'm going to fix my sleep schedule.
-                                </li>
-                            </ul>
+                        <div className={`${styles.listHeader} text subheaderText-${theme} bold`}>
+                        Some things that I've been up to recently include:
                         </div>
                         <div className={`${styles.aboutContent} text subheaderText-${theme} bold`}>
                             <div className={styles.listItem}>
-                                A few hobbies that I enjoy are:
+                                <ul>
+                                    <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
+                                        Developing games and immersing myself in Virtual Reality Environments.
+                                    </li>
+                                    <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
+                                        Swinging my arms around like a maniac while playing BeatSaber.
+                                    </li>
+                                    <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
+                                        Telling myself that I'm going to fix my sleep schedule.
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
+                        <div className={`${styles.listHeader} text subheaderText-${theme} bold`}>
+                            A few hobbies that I enjoy are:
+                        </div>
+                        <div className={`${styles.aboutContent} text subheaderText-${theme} bold`}>
                             <ul>
                                 <li className={`${styles.listItem} text subheaderText-${theme} italics`}>
                                     Coding throughout a week-long Test Cricket match

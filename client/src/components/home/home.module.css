@@ -1,9 +1,8 @@
 .hero {
-    height: 90vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 50px;
     margin-right: 20%;
 
     z-index: 1;
