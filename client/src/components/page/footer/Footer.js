@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className={`${styles.footerBar}`}>
             <div className={`${styles.footer} subheaderText-${theme} text`}>
-                @2022 coded and designed by jonoym
+                @2022 coded by jonoym
             </div>
         </div>
     );

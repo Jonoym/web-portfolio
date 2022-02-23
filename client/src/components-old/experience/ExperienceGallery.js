@@ -25,8 +25,24 @@ const ExperienceGallery = (props) => {
         marginTop: "200px",
     }
 
+    const displayLoading = () => {
+        if (experience.length == 0) {
+            return (
+                <div class="ripple-loader">
+                    <div></div>
+                    <div></div>
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
+
     return (
         <div style={style}>
+            {
+                displayLoading()
+            }
             {experience.map((experience) => {
                 return <ExperienceCard key={experience._id} details={experience} />
             })}

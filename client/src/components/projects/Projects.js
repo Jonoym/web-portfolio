@@ -20,10 +20,26 @@ const Projects = () => {
 
     const projects = useSelector((state) => state.projects);
 
+    const displayLoading = () => {
+        if (projects.length == 0) {
+            return (
+                <div className="ripple-loader">
+                    <div></div>
+                    <div></div>
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
+
     return (
         <Page path="/">
             <div className={`${styles.heading} headerText-${theme}`}>Here are some of the projects I’ve worked on in my spare time</div>
-            <div className={styles.hero}>                
+            <div className={styles.hero}>
+                    {
+                        displayLoading()
+                    }             
                 <div className={`${styles.gallery}`}>
                     {
                         projects.map((project) => {

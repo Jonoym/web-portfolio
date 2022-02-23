@@ -20,10 +20,26 @@ const Experience = () => {
 
     const experience = useSelector((state) => state.experience);
 
+    const displayLoading = () => {
+        if (experience.length == 0) {
+            return (
+                <div className="ripple-loader">
+                    <div></div>
+                    <div></div>
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
+
     return (
         <Page path="/">
             <div className={`${styles.heading} headerText-${theme}`}>Here are some things that I have had the opportunity to experience</div>
             <div className={styles.hero}>                
+                {
+                    displayLoading()
+                }
                 {
                     experience.map((experience) => {
                         return <ExperieceCard key={experience._id} details={experience} />
