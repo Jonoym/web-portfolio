@@ -92,5 +92,55 @@
     width: 25%;
     height: 100%;
     background: #BDADEA;
-    transform: translate(30px, 30px);
+    transform: translate(10px, 30px);
+}
+
+@media (max-width: 1200px) {
+    .heading {
+        font-size: 40px;
+    }
+
+    .role {
+        font-size: 24px;
+    }
+
+    .employer {
+        font-size: 17px;
+    }
+
+    .hero {
+        margin: 30px;
+    }
+
+    .card {
+        height: 300px
+    }
+
+    .information {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .role {
+        font-size: 20px;
+    }
+
+    .employer {
+        font-size: 15px;
+    }
+
+    .hero {
+        margin: 20px;
+    }
 }

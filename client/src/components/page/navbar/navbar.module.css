@@ -42,3 +42,14 @@
 .themeIcon:hover {
     color: #FFFFFF;
 }
+
+@media (max-width: 1200px) {
+    .navbar {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 15px 10%;
+        position: fixed;
+        border-radius: 0;
+    }
+}
