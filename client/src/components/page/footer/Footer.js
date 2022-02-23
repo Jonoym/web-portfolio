@@ -5,14 +5,13 @@ import styles from "./footer.module.css";
 import "../../styles.css"
 
 const Footer = () => {
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.footerBar}`}>
-            <div className={`${styles.footer} subheaderText-${theme}`}>
-                @2022 coded and designed by jonoym
+            <div className={`${styles.footer} subheaderText-${theme} text`}>
+                @2022 coded by jonoym
             </div>
         </div>
     );

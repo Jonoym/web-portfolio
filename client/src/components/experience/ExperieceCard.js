@@ -2,42 +2,38 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 
-import Page from "../page/Page";
-
 import styles from "./experience.module.css";
 import "../styles.css";
 import Tags from "../page/tags/Tags";
 
-const Experience = () => {
+const Experience = ({ details }) => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     return (
         <div className={`${styles.card} cardBar-${theme}`}>
             <div className={`${styles.leftCard}`}>                
                 <div className={`${styles.information}`}>
                     <div className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
-                        Summer Research Student
+                        {details.role}
                     </div>
                     <div className={`${styles.employer} text subheaderText-${theme}`}>
-                        University of Auckland
+                        {details.company}
                     </div>
                     <div className={`${styles.date} text subheaderText-${theme}`}>
                         <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
-                        Dec 2021 - Feb 2022
+                        {details.date}
                     </div>
                     <div className={`${styles.location} text subheaderText-${theme}`}>
                         <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
-                        Auckland, NZ
+                        {details.location}
                     </div>
                 </div>
-                <Tags></Tags>
+                <Tags tags={details.tags} />
             </div>
             <div className={`${styles.middleCard}`}>
                 <div className={`${styles.summary} text subheaderText-${theme}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed aliquet turpis, et auctor turpis. Nam nulla quam, elementum ut consectetur eget, accumsan nec enim. In eu pharetra nulla, et consectetur lacus. Sed luctus nec nisl ac maximus. Fusce blandit tortor arcu, at auctor dolor auctor quis. Vivamus quis tristique odio. Nam erat diam, sagittis id tellus vel, elementum dignissim sem.
+                    {details.text}                
                 </div>
             </div>
             <div className={`${styles.image}`}>

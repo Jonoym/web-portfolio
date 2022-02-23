@@ -1,7 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { BsHeadsetVr } from "react-icons/bs";
-
 
 import Page from "../page/Page";
 
@@ -11,9 +9,7 @@ import "../styles.css";
 
 const Home = () => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     return (
         <Page path="/">

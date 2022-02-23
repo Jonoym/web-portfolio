@@ -6,12 +6,18 @@ import "../../styles.css";
 
 const Tag = ({ children, main }) => {
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
+
+    const isMainTag = (main) => {
+        if (main) {
+            return "main";
+        } else {
+            return "";
+        }
+    }
 
     return (
-        <div className={`${styles.tag} tag-${theme} text bold tag-${main}-${theme}`}>{children}</div>
+        <div className={`${styles.tag} tag-${theme} text bold tag-${isMainTag(main)}-${theme}`}>{children}</div>
     );
 }
 

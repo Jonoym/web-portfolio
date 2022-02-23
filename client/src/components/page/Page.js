@@ -12,9 +12,7 @@ const Page = ({ path, children}) => {
 
     const [active, setActive] = useState(false);
 
-    const theme = useSelector((state) => {
-        return state.theme
-    });
+    const theme = useSelector((state) => state.theme);
 
     useEffect(() => {
         setActive(true);
