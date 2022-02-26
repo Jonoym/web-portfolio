@@ -90,6 +90,10 @@ textarea {
 }
 
 @media (max-width: 1008px) {
+    .hero {
+        width: 70%;
+    }
+
     .details {
         flex-direction: column;
     }
@@ -117,7 +121,7 @@ textarea {
     }
 
     .contact {
-        margin-top: 80px;
+        margin-top: 0px;
     }
 
     .header {
@@ -148,7 +152,7 @@ textarea {
     }
 
     .contact {
-        margin-top: 80px;
+        margin-top: 0px;
     }
 
     .header {

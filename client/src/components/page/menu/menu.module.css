@@ -55,7 +55,7 @@
     font-weight: 300;
     margin: 0px 15px;
 
-    position: absolute;
+    position: fixed;
     top: 45px;
     right: 2%;
 

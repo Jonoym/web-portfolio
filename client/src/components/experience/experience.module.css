@@ -107,26 +107,28 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
+    height: 100%;
 }
 
 .imageBorder {
-    width: 300px;
-    height: 200px;
+    width: 80%;
+    height: 100%;
+    position: absolute;
     transform: translate(0px, -30px);
     border: 2px solid #BDADEA;
 }
 
 .image {
-    position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 80%;
+    position: relative;
     background: #ADCDEA;
     transform: translate(30px, 0px);
     z-index: 1;
 }
 
 
-@media (max-width: 1008px) {
+@media (max-width: 1300px) {
     .heading {
         font-size: 40px;
     }
@@ -144,7 +146,7 @@
     }
     
     .card {
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     .cardText {
