@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import styles from "./page.module.css";
 import "../styles.css";
 
+import Menu from "./menu/Menu";
 import NavBar from "./navbar/NavBar";
 import LinksBar from "./linksbar/LinksBar";
 import Footer from "./footer/Footer";
@@ -34,6 +35,7 @@ const Page = ({ path, children}) => {
             <NavBar />
             <LinksBar />
             <Footer />
+            <Menu className={styles.menu}/>
         </div>
     );
 }

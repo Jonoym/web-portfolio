@@ -7,3 +7,7 @@
 
     transition: all 1s ease;
 }
+
+.menu {
+    visibility: hidden;
+}

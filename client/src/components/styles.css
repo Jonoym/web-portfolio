@@ -4,6 +4,7 @@
     --light-purple: #BDADEA;
     --dark-blue: #0E1226;
     --grey-blue: #2C2C40;
+    --light-grey-blue: #505075;
     --white: #EFEFEF;
     --off-white: #CCCCCC;
 }
@@ -120,6 +121,21 @@
     color: var(--grey-blue);
 }
 
+.linkInactive-dark {
+    color: var(--off-white);  
+}
+
+.linkInactive-light {
+    color: var(--light-grey-blue);
+}
+
+.linkActive-dark {
+    color: var(--light-purple);
+}
+
+.linkActive-light {
+    color: var(--dark-blue);
+}
 
 /* PROJECT AND EXPERIENCE CARDS */
 
@@ -162,6 +178,14 @@
 .underline:hover:after {
     transform: scaleX(1) translateY(2px);
     transform-origin: bottom left;
+}
+
+.menuColour-dark {
+    background: var(--light-purple);
+}
+
+.menuColour-light {
+    background: var(--dark-blue);
 }
 
 /* TAG AND TAG TEXT THEMES */
@@ -236,4 +260,36 @@
     background: var(--off-white);
     border: 1px solid var(--dark-blue);
     color: var(--grey-blue);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1008px) {
+    .headerText {
+        font-size: 50px;
+    }
+
+    .subheaderText {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .headerText {
+        font-size: 40px;
+    }
+
+    .subheaderText {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
 }

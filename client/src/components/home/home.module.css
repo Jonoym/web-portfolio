@@ -3,7 +3,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 20px;
     margin-right: 20%;
 
     z-index: 1;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        margin-right: 20px;
+    }
 }

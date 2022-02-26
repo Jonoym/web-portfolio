@@ -22,4 +22,4 @@ app.use("/contact", contactRoutes);
 
 mongoose.connect(CONNECTION_URL, { useNewURLParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT || 5000, () => console.log(`Server running on port: ${PORT}`)))
-    .catch((error) => console.log(error.message));
+    .catch((error) => console.log(error.message));  
