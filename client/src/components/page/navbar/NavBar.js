@@ -4,6 +4,7 @@ import { switchTheme } from "../../../actions/theme";
 import { Link, useLocation } from "react-router-dom";
 import { FaCloudSun, FaCloudMoon } from "react-icons/fa";
 
+import Menu from "../menu/Menu";
 
 import styles from "./navbar.module.css";
 import "../../styles.css";
@@ -35,16 +36,18 @@ const NavBar = () => {
     }
 
     return (
-        <div className={`${styles.navbar} containerOpaque-${theme}`}>
-            <div className={`${styles.links}`}>
-                <Link to="/" className={`${styles.link} ${getActivePage("/")}-${theme}`}>home</Link>
-                <Link to="/about" className={`${styles.link} ${getActivePage("/about")}-${theme}`}>about</Link>
-                <Link to="/experience" className={`${styles.link} ${getActivePage("/experience")}-${theme}`}>experience</Link>
-                <Link to="/projects" className={`${styles.link} ${getActivePage("/projects")}-${theme}`}>projects</Link>
-                <Link to="/contact" className={`${styles.link} ${getActivePage("/contact")}-${theme}`}>contact</Link>
-                {getIcon()}
+        <>
+            <div className={`${styles.navbar} containerOpaque-${theme}`}>
+                <div className={`${styles.links}`}>
+                    <Link to="/" className={`${styles.link} ${getActivePage("/")}-${theme}`}>home</Link>
+                    <Link to="/about" className={`${styles.link} ${getActivePage("/about")}-${theme}`}>about</Link>
+                    <Link to="/experience" className={`${styles.link} ${getActivePage("/experience")}-${theme}`}>experience</Link>
+                    <Link to="/projects" className={`${styles.link} ${getActivePage("/projects")}-${theme}`}>projects</Link>
+                    <Link to="/contact" className={`${styles.link} ${getActivePage("/contact")}-${theme}`}>contact</Link>
+                    {getIcon()}
                 </div>
-        </div>
+            </div>
+        </>
     );
 }
 

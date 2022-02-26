@@ -1,0 +1,106 @@
+.menu {
+    display: none;
+
+    padding: 10px 20px;
+    border-radius: 32px;
+
+    position: fixed;
+    top: 30px;
+    left: 2%;
+    z-index: 999;
+}
+
+.menu:hover {
+    cursor: pointer;;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+
+    margin: 6px 0px;
+}
+
+.links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-top: 100px;
+    padding-left: 16px;
+    width: 200px;
+    z-index: 200;
+    
+    transition: all 0.3s ease;
+}
+
+.link {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 20px 20px;
+
+    transition: all 0.3s ease;
+}
+
+.themeIcon {
+    display: none;
+    font-size: 35px;
+    text-decoration: none;
+    color: #BDADEA;
+    font-weight: 300;
+    margin: 0px 15px;
+
+    position: absolute;
+    top: 45px;
+    right: 2%;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.themeIcon:hover {
+    color: #FFFFFF;
+}
+
+.cover {
+    transition: all 0.3s ease;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 50%;
+    z-index: 100;
+}
+
+@media (max-width: 1008px) {
+    .menu {
+        display: block;
+    }
+
+    .themeIcon {
+        display: block;
+    }
+}
+
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
+.slideOut {
+    transform: translateX(-300px);
+}
+
+.slideIn {
+    transform: translateX(0px);
+}

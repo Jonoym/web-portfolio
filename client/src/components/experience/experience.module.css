@@ -1,7 +1,7 @@
 .hero {
     height: 100%;
     min-height: 100vh;
-    display: inline-block;
+    display: inline;
     justify-content: baseline;
     align-items: baseline;
     margin: 50px;
@@ -23,25 +23,39 @@
     transition: all 0.3s ease;
 }
 
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card {
-    height: 250px;
+    height: fit-content;
     transition: all 0.3s ease;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 70px;
+    width: 80%;
+}
+
+.cardText {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .leftCard {
     height: 100%;
-    width: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .information {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -78,56 +92,85 @@
 }
 
 .middleCard {
-    max-width: 40%;
+    width: 60%;
     height: 100%;
     display: flex;
 }
 
 .summary {
+    width: 100%;
     margin: 20px;
-    max-width: 50vw;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.imageBorder {
+    width: 300px;
+    height: 200px;
+    transform: translate(0px, -30px);
+    border: 2px solid #BDADEA;
 }
 
 .image {
-    width: 25%;
-    height: 100%;
-    background: #BDADEA;
-    transform: translate(10px, 30px);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: #ADCDEA;
+    transform: translate(30px, 0px);
+    z-index: 1;
 }
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1008px) {
     .heading {
         font-size: 40px;
     }
-
+    
     .role {
         font-size: 24px;
     }
-
+    
     .employer {
         font-size: 17px;
     }
-
+    
     .hero {
         margin: 30px;
     }
-
+    
     .card {
-        height: 300px
+        margin-bottom: 20px;
     }
 
+    .cardText {
+        flex-direction: column;
+    }
+    
     .information {
         margin-right: 10px;
     }
-}
 
-@media (max-width: 1000px) {
     .card {
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .middleCard {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .imageContainer {
+        margin-bottom: 10px;
+        margin-top: 30px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
     .heading {
         font-size: 32px;
     }

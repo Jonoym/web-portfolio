@@ -36,15 +36,17 @@ const Experience = () => {
     return (
         <Page path="/">
             <div className={`${styles.heading} headerText-${theme}`}>Here are some of my recent experiences</div>
-            <div className={styles.hero}>                
-                {
-                    displayLoading()
-                }
-                {
-                    experience.map((experience) => {
-                        return <ExperieceCard key={experience._id} details={experience} />
-                    })
-                }
+            <div className={styles.hero}>
+                <div className={styles.gallery}>
+                    {
+                        displayLoading()
+                    }
+                    {
+                        experience.map((experience) => {
+                            return <ExperieceCard key={experience._id} details={experience} />
+                        })
+                    }
+                </div>            
             </div>
         </Page>
     );

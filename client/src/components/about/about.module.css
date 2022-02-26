@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0px 50px;
+    margin: 50px 50px;
 }
 
 .image {
@@ -21,6 +21,8 @@
     height: 500px;
 
     background: #BBBBBB;
+
+    margin-left: 40px;
 }
 
 .about {
@@ -65,17 +67,7 @@
     transition: all 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-    .headerText {
-        font-size: 40px;
-    }
-
-    .closingText {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1008px) {
     .container {
         flex-direction: column;
     }
@@ -85,10 +77,11 @@
         height: 300px;
         margin-top: 100px;
         margin-bottom: 20px;
+        margin-left: 0px;
     }
 
     .contents {
-        margin: 0px 30px
+        margin: 30px 30px
     }
 
     .about {
@@ -96,7 +89,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
     .headerText {
         font-size: 32px;
     }

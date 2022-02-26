@@ -12,32 +12,35 @@ const Experience = ({ details }) => {
 
     return (
         <div className={`${styles.card} cardBar-${theme}`}>
-            <div className={`${styles.leftCard}`}>                
-                <div className={`${styles.information}`}>
-                    <div className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
-                        {details.role}
+            <div className={styles.cardText}>
+                <div className={`${styles.leftCard}`}>                
+                    <div className={`${styles.information}`}>
+                        <div className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
+                            {details.role}
+                        </div>
+                        <div className={`${styles.employer} text subheaderText-${theme}`}>
+                            {details.company}
+                        </div>
+                        <div className={`${styles.date} text subheaderText-${theme}`}>
+                            <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
+                            {details.date}
+                        </div>
+                        <div className={`${styles.location} text subheaderText-${theme}`}>
+                            <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
+                            {details.location}
+                        </div>
                     </div>
-                    <div className={`${styles.employer} text subheaderText-${theme}`}>
-                        {details.company}
-                    </div>
-                    <div className={`${styles.date} text subheaderText-${theme}`}>
-                        <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
-                        {details.date}
-                    </div>
-                    <div className={`${styles.location} text subheaderText-${theme}`}>
-                        <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
-                        {details.location}
+                    <Tags tags={details.tags} />
+                </div>
+                <div className={`${styles.middleCard}`}>
+                    <div className={`${styles.summary} text subheaderText-${theme}`}>
+                        {details.text}                
                     </div>
                 </div>
-                <Tags tags={details.tags} />
             </div>
-            <div className={`${styles.middleCard}`}>
-                <div className={`${styles.summary} text subheaderText-${theme}`}>
-                    {details.text}                
-                </div>
-            </div>
-            <div className={`${styles.image}`}>
-
+            <div className={styles.imageContainer} >
+                <div className={`${styles.image}`} />
+                <div className={`${styles.imageBorder}`} />
             </div>
         </div>
     );

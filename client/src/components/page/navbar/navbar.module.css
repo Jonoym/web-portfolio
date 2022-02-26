@@ -11,6 +11,10 @@
     z-index: 999;
 }
 
+.menu {
+    display: none;
+}
+
 .links {
     position: relative;
     display: flex;
@@ -43,7 +47,7 @@
     color: #FFFFFF;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1008px) {
     .navbar {
         width: 100%;
         top: 0;
@@ -51,5 +55,8 @@
         padding: 15px 10%;
         position: fixed;
         border-radius: 0;
+        display: none;
+        box-shadow: none;
+
     }
 }

@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 import Page from "../page/Page";
 
-
 import styles from "./home.module.css";
 import "../styles.css";
 
