@@ -8,6 +8,7 @@ import Experience from "./experience/Experience";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 // import Create from "./create/Create";
+import VR from "./articles/vr/VR";
 import Error from "./error/Error";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path="projects" element={<Projects />} /> 
                 <Route path="contact" element={<Contact />} /> 
                 {/* <Route path="create" element={<Create />} />  */}
+                <Route path="/vr" element={<VR />} />
                 <Route path="*" element={<Error />} /> 
             </Routes>
         </BrowserRouter>
