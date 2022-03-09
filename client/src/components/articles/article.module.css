@@ -9,6 +9,10 @@
     width: 800px;
 }
 
+.sectionHeader {
+    font-size: 40px;
+}
+
 @media (max-width: 1008px) {
     .banner {
         width: 77%;
@@ -16,5 +20,9 @@
 
     .content {
         width: 65%;
+    }
+
+    .sectionHeader {
+        font-size: 30px;
     }
 }

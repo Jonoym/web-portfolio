@@ -37,6 +37,7 @@
         position: relative;
         left: auto;
         padding: 8px 10px;
+        background: transparent;
     }
 
     .icon {

@@ -54,13 +54,15 @@
     color: #BDADEA;
     font-weight: 300;
     margin: 0px 15px;
-
-    position: absolute;
-    top: 45px;
+    top: 90px;
     right: 2%;
 
     cursor: pointer;
     transition: all 0.3s ease;
+
+    position: fixed;
+    top: 90px;
+    left: 2.3%;
 }
 
 .themeIcon:hover {
