@@ -149,6 +149,14 @@
     border-color: var(--dark-blue);
 }
 
+.divider-dark {
+    background: var(--light-purple);
+}
+
+.divider-light {
+    background: var(--dark-blue);
+}
+
 .underline {
     display: inline-block;
     position: relative;
