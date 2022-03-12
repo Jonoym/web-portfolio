@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getExperience } from "../../../actions/experience";
+import { getExperience } from "../../actions/experience";
 
-import styles from "../article.module.css";
-import "../../styles.css";
+import styles from "./article.module.css";
+import "../styles.css";
 
-import Article from "../Article";
+import Article from "./Article";
 
 const VR = () => {
 
@@ -37,7 +37,7 @@ const VR = () => {
             {displayLoading()}
             {
                 experience.map((experience) => {
-                    if (experience.tag == "vr") {
+                    if (experience.tag == "aubot") {
                         return (
                             <Article key={experience._id} details={experience}/>
                         )

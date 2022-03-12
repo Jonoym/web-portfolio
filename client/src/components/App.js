@@ -10,7 +10,8 @@ import About from "./about/About";
 import Experience from "./experience/Experience";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
-import VR from "./articles/vr/VR";
+import VR from "./articles/VR";
+import Aubot from "./articles/Aubot";
 // import Create from "./create/Create";
 import Error from "./error/Error";
 
@@ -34,9 +35,8 @@ const App = () => {
                 <Route path="experience" element={<Experience />} /> 
                 <Route path="projects" element={<Projects />} /> 
                 <Route path="contact" element={<Contact />} /> 
-                {/* <Route path="create" element={<Create />} />  */}
                 <Route path="vr" element={<VR />} /> 
-                <Route path="aubot" element={<VR />} /> 
+                <Route path="aubot" element={<Aubot />} /> 
                 <Route path="nujim" element={<VR />} /> 
                 {/* {
                     experience.map((experience) => {

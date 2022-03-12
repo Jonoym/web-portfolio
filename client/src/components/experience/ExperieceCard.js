@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import styles from "./experience.module.css";
 import "../styles.css";
@@ -16,9 +17,10 @@ const Experience = ({ details }) => {
             <div className={styles.cardText}>
                 <div className={`${styles.leftCard}`}>                
                     <div className={`${styles.information}`}>
-                        <div className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
+                        {console.log(details.tag)}
+                        <Link to={`/${details.tag}`} className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
                             {details.role}
-                        </div>
+                        </Link>
                         <div className={`${styles.employer} text subheaderText-${theme}`}>
                             {details.company}
                         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 
 import styles from "./article.module.css";
 import "../styles.css";
@@ -17,11 +18,16 @@ const Article = ({ details }) => {
                 <div className={`headerText-${theme} headerText`}>
                     {details.title}
                 </div>
-                <div className={styles.employer}>
+                <div className={`${styles.employer} text subheaderText-${theme}`}>
                     {details.company}
                 </div>
-                <div className={styles.date}>
+                <div className={`${styles.date} text subheaderText-${theme}`}>
+                    <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
                     {details.date}
+                </div>
+                <div className={`${styles.location} text subheaderText-${theme}`}>
+                    <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
+                    {details.location}
                 </div>
                 <div className={`${styles.divider} divider-${theme}`} />
                 {
@@ -31,9 +37,7 @@ const Article = ({ details }) => {
                         )
                     })
                 }
-                {
-                    console.log(details.content)
-                }
+                <div className={`${styles.divider} divider-${theme}`} />
                 {
                     details.content.map((section) => {
                         return (
