@@ -12,6 +12,7 @@ import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import VR from "./articles/VR";
 import Aubot from "./articles/Aubot";
+import Nujim from "./articles/Nujim";
 // import Create from "./create/Create";
 import Error from "./error/Error";
 
@@ -37,7 +38,7 @@ const App = () => {
                 <Route path="contact" element={<Contact />} /> 
                 <Route path="vr" element={<VR />} /> 
                 <Route path="aubot" element={<Aubot />} /> 
-                <Route path="nujim" element={<VR />} /> 
+                <Route path="nujim" element={<Nujim />} /> 
                 {/* {
                     experience.map((experience) => {
                         return (

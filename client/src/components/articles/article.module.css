@@ -18,6 +18,7 @@
 
 .summary {
     margin-bottom: 20px;
+    line-height: 35px;
 }
 
 .section {
@@ -25,12 +26,12 @@
 }
 
 .employer {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 5px;
 }
 
 .date, .location {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
@@ -47,10 +48,20 @@
 .divider {
     width: 110%;
     transform: translateX(-5%);
-    height: 2px;
+    height: 1px;
     margin: 25px 0px;
 
     transition: all 0.3s ease;
+}
+
+.sectionHeader {
+    font-size: 26px;
+    margin-left: 15px;
+}
+
+.articleText {
+    font-size: 18px;
+    line-height: 35px;
 }
 
 @media (max-width: 1008px) {
@@ -58,11 +69,19 @@
         width: 77%;
     }
 
+    .summary {
+        line-height: 30px;
+    }
+
     .content {
         width: 70%;
     }
 
     .sectionHeader {
-        font-size: 30px;
+        font-size: 23px;
+    }
+
+    .articleText {
+        font-size: 16px;
     }
 }

@@ -17,7 +17,6 @@ const Experience = ({ details }) => {
             <div className={styles.cardText}>
                 <div className={`${styles.leftCard}`}>                
                     <div className={`${styles.information}`}>
-                        {console.log(details.tag)}
                         <Link to={`/${details.tag}`} className={`${styles.role} italics headerText-${theme} underline underline-${theme}`}>
                             {details.role}
                         </Link>

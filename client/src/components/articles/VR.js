@@ -20,19 +20,6 @@ const VR = () => {
 
     const experience = useSelector((state) => state.experience);
 
-    const displayLoading = () => {
-        if (experience.length == 0) {
-            return (
-                <div className="ripple-loader">
-                    <div></div>
-                    <div></div>
-                </div>
-            )
-        } else {
-            return null;
-        }
-    }
-
     const getLoadingPage = () => {
         if (experience.length == 0) {
             return (
@@ -55,7 +42,7 @@ const VR = () => {
                 experience.map((experience) => {
                     if (experience.tag == "vr") {
                         return (
-                            <Article key={experience._id} details={experience}/>
+                            <Article key={experience._id} details={experience} type="experience"/>
                         )
                     }
                 })

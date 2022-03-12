@@ -7,9 +7,20 @@ import "../styles.css";
 
 import Page from "../page/Page";
 
-const Article = ({ details }) => {
+const Article = ({ details, type }) => {
 
     const theme = useSelector((state) => state.theme);
+
+    const getLocation = () => {
+        if (type == "experience") {
+            return (
+                <div className={`${styles.location} text subheaderText-${theme}`}>
+                    <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
+                    {details.location}
+                </div>
+            )
+        }
+    }
 
     return (
         <Page>
@@ -25,10 +36,9 @@ const Article = ({ details }) => {
                     <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
                     {details.date}
                 </div>
-                <div className={`${styles.location} text subheaderText-${theme}`}>
-                    <FaMapMarkedAlt className={`${styles.smallIcon} icon-${theme}`}/>
-                    {details.location}
-                </div>
+                {
+                    getLocation()
+                }
                 <div className={`${styles.divider} divider-${theme}`} />
                 {
                     details.pageSummary.map((text, i) => {
@@ -45,7 +55,7 @@ const Article = ({ details }) => {
                                 <div className={`headerText-${theme} ${styles.sectionHeader}`}>
                                     {section.header}    
                                 </div>
-                                <div className={`text subheaderText-${theme}`}>
+                                <div className={`text subheaderText-${theme} ${styles.articleText}`}>
                                     {section.text}    
                                 </div>
                             </div>

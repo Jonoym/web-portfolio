@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getExperience } from "../../actions/experience";
+import { getProjects } from "../../actions/projects";
 
 import styles from "./article.module.css";
 import "../styles.css";
@@ -8,20 +8,34 @@ import "../styles.css";
 import Page from "../page/Page";
 import Article from "./Article";
 
-const Aubot = () => {
+const Nujim = () => {
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getExperience())
+        dispatch(getProjects())
     }, [dispatch])
 
     const theme = useSelector((state) => state.theme);
 
-    const experience = useSelector((state) => state.experience);
+    const projects = useSelector((state) => state.projects);
+
+    const displayLoading = () => {
+        if (projects.length == 0) {
+            return (
+                <div className="ripple-loader">
+                    <div></div>
+                    <div></div>
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
 
     const getLoadingPage = () => {
-        if (experience.length == 0) {
+        if (projects.length == 0) {
+            console.log("here");
             return (
                 <Page>
                     <div className="ripple-loader">
@@ -35,12 +49,14 @@ const Aubot = () => {
 
     return (
         <>
-            {getLoadingPage()}
             {
-                experience.map((experience) => {
-                    if (experience.tag == "aubot") {
+                getLoadingPage()
+            }
+            {
+                projects.map((project) => {
+                    if (project.tag == "nujim") {
                         return (
-                            <Article key={experience._id} details={experience} type="experience"/>
+                            <Article key={project._id} details={project}/>
                         )
                     }
                 })
@@ -49,4 +65,4 @@ const Aubot = () => {
     )
 }
 
-export default Aubot;
+export default Nujim;

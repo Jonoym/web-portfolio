@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import styles from "./projects.module.css";
 import "../styles.css";
@@ -17,9 +18,9 @@ const ProjectCard = ({ details }) => {
                 <div className={`${styles.imageBorder}`} />
             </div>
             <div className={`${styles.information}`}>
-                <div className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
-                    {details.project}
-                </div>
+                <Link to={`/${details.tag}`} className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
+                    {details.title}
+                </Link>
                 <div className={`${styles.date} text subheaderText-${theme}`}>
                     <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
                     {details.date}
