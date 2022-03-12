@@ -1,8 +1,8 @@
-import { FETCH_ALL, CREATE } from "../constants/actionTypes";
+import { FETCH_EXPERIENCE, CREATE } from "../constants/actionTypes";
 
 export default (experience = [], action) => {
     switch (action.type) {
-        case FETCH_ALL:
+        case FETCH_EXPERIENCE:
             return action.payload;
         case CREATE:
             return [ ...experience, action.payload];

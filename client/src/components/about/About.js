@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Page from "../page/Page";
 import { FaMapMarkerAlt, FaHome } from "react-icons/fa";
 
-
+import Photo from "../../images/image.png";
 import styles from "./about.module.css";
 import "../styles.css";
 
@@ -15,9 +15,8 @@ const About = () => {
     return (
         <Page path="/about">
             <div className={styles.container}>
-                <div className={styles.image}>
+                <img src={Photo} className={styles.image}/>
 
-                </div>
                 <div className={styles.contents}>
                     <div className={`subheaderText subheaderText-${theme} italics`}>Nice to meet you!</div>
                     <div className={`${styles.headerText} headerText-${theme}`}>I'm Jonathan</div>

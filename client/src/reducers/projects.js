@@ -1,10 +1,9 @@
-import { FETCH_ALL, CREATE, DELETE } from "../constants/actionTypes";
+import { FETCH_PROJECTS, CREATE, DELETE } from "../constants/actionTypes";
 
 
 export default (projects = [], action) => {
     switch (action.type) {
-        case FETCH_ALL:
-            console.log(action.payload);
+        case FETCH_PROJECTS:
             return action.payload;
         case CREATE:
             return [ ...projects, action.payload];

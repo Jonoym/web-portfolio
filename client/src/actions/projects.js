@@ -1,11 +1,11 @@
 import * as api from "../api";
-import { FETCH_ALL, CREATE, DELETE } from "../constants/actionTypes";
+import { FETCH_PROJECTS, CREATE, DELETE } from "../constants/actionTypes";
 
 export const getProjects = () => async (dispatch) => {
     try {
         const { data } = await api.fetchProjects();
         const action = {
-            type: FETCH_ALL,
+            type: FETCH_PROJECTS,
             payload: data 
         }
         dispatch(action);

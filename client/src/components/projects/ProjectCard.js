@@ -27,7 +27,7 @@ const ProjectCard = ({ details }) => {
             </div>
             <Tags tags={details.tags} />
             <div className={`${styles.summary} text subheaderText-${theme}`}>
-                {details.text}                
+                {details.summary}                
             </div>
         </div>
     );

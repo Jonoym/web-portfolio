@@ -17,8 +17,8 @@
 }
 
 .image {
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: auto;
 
     background: #BBBBBB;
 
@@ -73,15 +73,19 @@
     }
 
     .image {
-        width: 80%;
-        height: 300px;
+        width: 65%;
+        height: auto;
         margin-top: 100px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         margin-left: 0px;
     }
 
+    .aboutContent {
+        max-width: 1000px;
+    }
+
     .contents {
-        margin: 30px 30px
+        width: 70%;
     }
 
     .about {
@@ -96,9 +100,5 @@
     
     .closingText {
         font-size: 24px;
-    }
-
-    .contents {
-        margin: 0px 30px
     }
 }

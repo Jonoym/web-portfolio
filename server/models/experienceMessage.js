@@ -5,9 +5,10 @@ const experienceSchema = mongoose.Schema({
     company: String,
     date: String,
     location: String,
-    text: String,
+    summary: String,
     tags: String,
-    image: String
+    image: String,
+    tag: String,
 });
 
 const ExperienceMessage = mongoose.model("ExperienceMessage", experienceSchema)

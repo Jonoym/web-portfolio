@@ -6,6 +6,8 @@
     align-items: center;
 
     transition: all 1s ease;
+    min-height: 95vh;
+
 }
 
 .menu {

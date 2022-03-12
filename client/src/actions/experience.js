@@ -1,11 +1,11 @@
 import * as api from "../api";
-import { FETCH_ALL, CREATE } from "../constants/actionTypes";
+import { FETCH_EXPERIENCE, CREATE } from "../constants/actionTypes";
 
 export const getExperience = () => async (dispatch) => {
     try {
         const { data } = await api.fetchExperience();
         const action = {
-            type: FETCH_ALL,
+            type: FETCH_EXPERIENCE,
             payload: data 
         }
         dispatch(action);

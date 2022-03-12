@@ -5,6 +5,7 @@ import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 import styles from "./experience.module.css";
 import "../styles.css";
 import Tags from "../page/tags/Tags";
+import Cow from "../../images/Cow.png";
 
 const Experience = ({ details }) => {
 
@@ -34,12 +35,12 @@ const Experience = ({ details }) => {
                 </div>
                 <div className={`${styles.middleCard}`}>
                     <div className={`${styles.summary} text subheaderText-${theme}`}>
-                        {details.text}                
+                        {details.summary}                
                     </div>
                 </div>
             </div>
             <div className={styles.imageContainer} >
-                <div className={`${styles.image}`} />
+                <img src={Cow} className={styles.image} />
                 <div className={`${styles.imageBorder}`} />
             </div>
         </div>

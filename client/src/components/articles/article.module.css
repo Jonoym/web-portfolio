@@ -16,11 +16,21 @@
     transition: all 0.3s ease;
 }
 
+.summary {
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
 .divider {
     width: 110%;
     transform: translateX(-5%);
     height: 2px;
     margin: 25px 0px;
+
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 1008px) {
