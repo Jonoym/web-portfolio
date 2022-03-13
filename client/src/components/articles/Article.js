@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
+import { BsArrowBarLeft } from "react-icons/bs";
 
 import styles from "./article.module.css";
 import "../styles.css";
@@ -22,8 +24,32 @@ const Article = ({ details, type }) => {
         }
     }
 
+    const getLink = () => {
+        if (type == "experience") {
+            return (
+                    <Link to="/experience" className={`back back-${theme}`}>
+                        <BsArrowBarLeft className={`backIcon`}/>
+                        <div className={`text subheaderText-${theme} backText`}>
+                            to Experience
+                        </div>
+                    </Link>
+            )
+        } 
+        return (
+            <Link to="/projects" className={`back back-${theme}`}>
+                <BsArrowBarLeft className={`backIcon`}/>
+                <div className={`text subheaderText-${theme} backText`}>
+                    to Projects
+                </div>
+            </Link>
+        )
+    }
+
     return (
         <Page>
+            {
+                getLink()
+            }
             <div className={styles.banner} />
             <div className={styles.content}>
                 <div className={`headerText-${theme} headerText`}>

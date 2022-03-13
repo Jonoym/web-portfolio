@@ -51,7 +51,6 @@
     display: none;
     font-size: 35px;
     text-decoration: none;
-    color: #BDADEA;
     font-weight: 300;
     margin: 0px 15px;
     top: 90px;
@@ -65,9 +64,6 @@
     left: 2.3%;
 }
 
-.themeIcon:hover {
-    color: #FFFFFF;
-}
 
 .cover {
     transition: all 0.3s ease;

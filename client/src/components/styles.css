@@ -220,6 +220,68 @@
     border: 1px solid var(--dark-blue);
 }
 
+.back {
+    position: absolute;
+    top: 30px;
+    left: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.back-dark {
+    color: var(--light-purple);
+}
+
+.backIcon:active {
+    color: var(--light-purple);
+}
+
+.back-light {
+    color: var(--dark-blue);
+}
+
+.backIcon:active {
+    color: var(--dark-blue);
+}
+
+.backText {
+    font-size: 20px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.back:link {
+    text-decoration: none;
+    color: inherit
+}
+
+.back:active {
+    text-decoration: none;
+    color: inherit
+}
+
+.back-dark:active .backIcon {
+    color: var(--light-purple);
+}
+
+.back-light:active .backIcon {
+    color: var(--dark-blue);
+}
+
+.backIcon {
+    font-size: 40px;
+}
+
+@media (max-width: 1008px) {
+    .backText {
+        display: none
+    }
+
+    .backIcon {
+        transform: translate(15px, 110px)
+    }
+}
+
 /** LOADER **/
 
 .ripple-loader {

@@ -23,9 +23,9 @@ const Menu = () => {
 
     const getIcon = () => {
         if (theme === "dark") {
-            return <FaCloudSun onClick={onClick} className={styles.themeIcon}/>;
+            return <FaCloudSun onClick={onClick} className={`${styles.themeIcon}  icon-${theme}`}/>;
         } else {
-            return <FaCloudMoon onClick={onClick} className={styles.themeIcon}/>
+            return <FaCloudMoon onClick={onClick} className={`${styles.themeIcon}  icon-${theme}`}/>
         }
     }
 
