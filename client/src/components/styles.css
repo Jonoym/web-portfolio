@@ -9,9 +9,9 @@
     --off-white: #CCCCCC;
 }
 
-::selection {
+/* ::selection {
     background: var(--light-purple);
-}
+} */
 
 * {
     margin: 0;
