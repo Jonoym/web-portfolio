@@ -278,7 +278,8 @@
     }
 
     .backIcon {
-        transform: translate(15px, 110px)
+        transform: translate(15px, 130px);
+        position: fixed;
     }
 }
 

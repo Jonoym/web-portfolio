@@ -22,6 +22,10 @@
     margin: 10px 10px;
 }
 
+.bigMessage {
+    font-size:35px;
+}
+
 .links {
     display: flex;
     flex-direction: column;
@@ -34,4 +38,15 @@
 
     display: block;
     text-decoration: none;
+}
+
+@media (max-width: 1008px) {
+    .hero {
+        margin: 20px;
+        transform: translateX(-10%)
+    }
+
+    .bigMessage {
+        font-size:25px;
+    }
 }

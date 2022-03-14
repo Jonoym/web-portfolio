@@ -11,12 +11,13 @@ const ProjectCard = ({ details }) => {
 
     const theme = useSelector((state) => state.theme);
 
+    console.log(details.image)
+
     return (
         <div className={`${styles.card} cardBar-${theme}`}>
-            <div className={styles.imageContainer} >
-                <div className={`${styles.image}`} />
-                <div className={`${styles.imageBorder}`} />
-            </div>
+            <Link to={`/${details.tag}`}>
+                <img src={details.image} className={`${styles.image}`} />
+            </Link>
             <div className={`${styles.information}`}>
                 <Link to={`/${details.tag}`} className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
                     {details.title}

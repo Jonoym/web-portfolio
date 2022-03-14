@@ -8,6 +8,7 @@ import styles from "./article.module.css";
 import "../styles.css";
 
 import Page from "../page/Page";
+import Tags from "../page/tags/Tags";
 
 const Article = ({ details, type }) => {
 
@@ -50,7 +51,7 @@ const Article = ({ details, type }) => {
             {
                 getLink()
             }
-            <div className={styles.banner} />
+            <img src={details.image} className={styles.banner} />
             <div className={styles.content}>
                 <div className={`headerText-${theme} headerText`}>
                     {details.title}
@@ -58,6 +59,7 @@ const Article = ({ details, type }) => {
                 <div className={`${styles.employer} text subheaderText-${theme}`}>
                     {details.company}
                 </div>
+                <Tags tags={details.tags} />
                 <div className={`${styles.date} text subheaderText-${theme}`}>
                     <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
                     {details.date}

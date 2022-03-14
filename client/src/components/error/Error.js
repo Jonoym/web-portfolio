@@ -16,8 +16,10 @@ const Error = () => {
         <Page to="">
             <div className={styles.hero}>
                 <div className={`subheaderText subheaderText-${theme} italics ${styles.errorMessage}`}>Hey! You're not suppose to be here</div>
-                <div className={`subheaderText subheaderText-${theme} italics ${styles.errorMessage}`}>Let's get you back on track</div>
-                <div className={`subheaderText headerText-${theme} italics ${styles.errorMessage}`}>Where would you like to visit?</div>
+                <div className={`subheaderText subheaderText-${theme} italics ${styles.errorMessage}`}>Hmmm, maybe I broke something</div>
+
+                <div className={`subheaderText subheaderText-${theme} italics ${styles.errorMessage}`}>Anyways, let's get you back on track</div>
+                <div className={`subheaderText headerText-${theme} italics ${styles.errorMessage} ${styles.bigMessage}`}>Where would you like to visit?</div>
                 <div className={styles.links}>
                     <Link to="/" className={`${styles.link} subheaderText italics input-${theme}`}>home</Link>
                     <Link to="/about" className={`${styles.link} subheaderText italics input-${theme}`}>about</Link>

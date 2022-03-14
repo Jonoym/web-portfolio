@@ -1,10 +1,10 @@
 @import '../styles.css';
 
 .banner {
-    height: 500px;
-    width: 800px;
+    width: 780px;
     background: rgb(0, 153, 255);
     margin: 50px;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -48,8 +48,8 @@
 }
 
 .divider {
-    width: 110%;
-    transform: translateX(-5%);
+    width: 106%;
+    transform: translateX(-3%);
     height: 1px;
     margin: 25px 0px;
 
@@ -68,7 +68,7 @@
 
 @media (max-width: 1008px) {
     .banner {
-        width: 77%;
+        width: 70%;
     }
 
     .summary {
