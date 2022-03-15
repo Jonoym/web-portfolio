@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaGithub, FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 import { BsArrowBarLeft } from "react-icons/bs";
 
 import styles from "./article.module.css";
@@ -53,8 +53,13 @@ const Article = ({ details, type }) => {
             }
             <img src={details.image} className={styles.banner} />
             <div className={styles.content}>
-                <div className={`headerText-${theme} headerText`}>
-                    {details.title}
+                <div className={styles.articleHeader}>
+                    <div className={`headerText-${theme} headerText`}>
+                        {details.title}
+                    </div>
+                    <a href="https://github.com/" className={`${styles.sourceCode} repoLink-${theme}`}>
+                        <FaGithub className={`${styles.icon} ${theme}`}/>
+                    </a>
                 </div>
                 <div className={`${styles.employer} text subheaderText-${theme}`}>
                     {details.company}

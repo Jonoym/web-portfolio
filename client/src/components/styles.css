@@ -145,6 +145,24 @@
     color: var(--dark-blue);
 }
 
+.repoLink-dark {
+    color: var(--light-purple);
+    transition: all 0.3s ease;
+}
+
+.repoLink-dark:hover {
+    color: var(--off-white);
+}
+
+.repoLink-light {
+    color: var(--light-grey-blue);
+    transition: all 0.3s ease;
+}
+
+.repoLink-light:hover {
+    color: var(--dark-blue);
+}
+
 /* PROJECT AND EXPERIENCE CARDS */
 
 .cardBar-dark {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaGithub, FaCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import styles from "./projects.module.css";
@@ -31,10 +31,16 @@ const ProjectCard = ({ details }) => {
                     displayLoader()
                 }
             </Link>
+
             <div className={`${styles.information}`}>
-                <Link to={`/${details.tag}`} className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
-                    {details.title}
-                </Link>
+                <div className={`${styles.cardHeader}`}>
+                    <Link to={`/${details.tag}`} className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
+                        {details.title}
+                    </Link>
+                    <a href="https://github.com/" className={`${styles.sourceCode} repoLink-${theme}`}>
+                        <FaGithub className={`${styles.icon} ${theme}`}/>
+                    </a>
+                </div>
                 <div className={`${styles.date} text subheaderText-${theme}`}>
                     <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>
                     {details.date}

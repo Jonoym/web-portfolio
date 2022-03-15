@@ -19,6 +19,10 @@ const Page = ({ path, children}) => {
         setActive(true);
     }, [active])
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
+
     const getActivePage = () => {
         if (active) {
             return "opacity";
