@@ -33,7 +33,7 @@
 }
 
 .date, .location {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -45,6 +45,7 @@
 .smallIcon {
     margin: 0px 7px;
     transition: all 0.3s ease;
+    font-size: 16px;
 }
 
 .divider {

@@ -4,6 +4,7 @@ import { getExperience } from "../../actions/experience";
 
 import Page from "../page/Page";
 import ExperieceCard from "./ExperienceCard";
+import Loader from "../page/Loader";
 
 import styles from "./experience.module.css";
 import "../styles.css";
@@ -23,10 +24,7 @@ const Experience = () => {
     const displayLoading = () => {
         if (experience.length == 0) {
             return (
-                <div className="ripple-loader">
-                    <div></div>
-                    <div></div>
-                </div>
+                <Loader />
             )
         } else {
             return null;

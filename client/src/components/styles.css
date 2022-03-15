@@ -64,6 +64,14 @@
     transition: all 0.3s ease;
 }
 
+.cardText {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    transition: all 0.3s ease;
+    line-height: 30px;
+}
+
 .italics {
     font-style: italic;
 }
@@ -140,12 +148,12 @@
 /* PROJECT AND EXPERIENCE CARDS */
 
 .cardBar-dark {
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-color: var(--light-purple);
 }
 
 .cardBar-light {
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-color: var(--dark-blue);
 }
 
@@ -289,7 +297,8 @@
     position: relative;
     width: 64px;
     height: 64px;
-    transform: translateX(-32px)
+    transform: translateX(-32px);
+    margin: 50px auto;
   }
   
   .ripple-loader div {
@@ -345,11 +354,9 @@
         font-size: 18px;
     }
 
-    .text {
+    .cardText {
         font-size: 16px;
     }
-
-
 }
 
 @media (max-width: 640px) {
@@ -363,5 +370,9 @@
 
     .text {
         font-size: 14px;
+    }
+
+    .cardText {
+        font-size: 15px;
     }
 }

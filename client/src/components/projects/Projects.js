@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProjects } from "../../actions/projects";
 
 import Page from "../page/Page";
+import Loader from "../page/Loader";
 
 import styles from "./projects.module.css";
 import "../styles.css";
@@ -23,10 +24,7 @@ const Projects = () => {
     const displayLoading = () => {
         if (projects.length == 0) {
             return (
-                <div className="ripple-loader">
-                    <div></div>
-                    <div></div>
-                </div>
+                <Loader />
             )
         } else {
             return null;

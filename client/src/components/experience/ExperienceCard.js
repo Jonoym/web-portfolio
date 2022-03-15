@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -6,11 +6,22 @@ import { Link } from "react-router-dom";
 import styles from "./experience.module.css";
 import "../styles.css";
 import Tags from "../page/tags/Tags";
+import Loader from "../page/Loader";
 import Cow from "../../images/Cow.png";
 
 const Experience = ({ details }) => {
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     const theme = useSelector((state) => state.theme);
+
+    const displayLoader = () => {
+        if (!imageLoaded) {
+            return (
+                <Loader />
+            )
+        }
+    }
 
     return (
         <div className={`${styles.card} cardBar-${theme}`}>
@@ -35,15 +46,17 @@ const Experience = ({ details }) => {
                     <Tags tags={details.tags} />
                 </div>
                 <div className={`${styles.middleCard}`}>
-                    <div className={`${styles.summary} text subheaderText-${theme}`}>
+                    <div className={`${styles.summary} cardText subheaderText-${theme}`}>
                         {details.summary}                
                     </div>
                 </div>
             </div>
-            <div className={styles.imageContainer} >
-                <img src={Cow} className={styles.image} />
-                <div className={`${styles.imageBorder}`} />
-            </div>
+            <Link to={`/${details.tag}`}className={styles.imageContainer} >
+                <img src={details.image} className={`${styles.image}`} style={imageLoaded ? {} : { display: 'none' }} onLoad={() => setImageLoaded(true)} />
+                {
+                    displayLoader()
+                }
+            </Link>
         </div>
     );
 }

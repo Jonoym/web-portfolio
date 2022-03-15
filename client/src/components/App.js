@@ -14,6 +14,7 @@ import VR from "./articles/VR";
 import Aubot from "./articles/Aubot";
 import Nujim from "./articles/Nujim";
 import Junstris from "./articles/Junstris";
+import WebPortfolio from "./articles/WebPortfolio";
 // import Create from "./create/Create";
 import Error from "./error/Error";
 
@@ -41,6 +42,7 @@ const App = () => {
                 <Route path="aubot" element={<Aubot />} /> 
                 <Route path="nujim" element={<Nujim />} /> 
                 <Route path="junstris" element={<Junstris />} /> 
+                <Route path="web-portfolio" element={<WebPortfolio />} /> 
                 {/* {
                     experience.map((experience) => {
                         return (

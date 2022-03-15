@@ -1,6 +1,6 @@
 .hero {
     height: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
     display: inline;
     justify-content: baseline;
     align-items: baseline;
@@ -17,7 +17,7 @@
     padding-left: 2vw;
     margin-top: 150px;
 
-    font-size: 50px;
+    font-size: 60px;
     z-index: 0;
 
     transition: all 0.3s ease;
@@ -25,6 +25,7 @@
 
 .gallery {
     width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,14 +38,14 @@
 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
-    width: 80%;
+    margin-bottom: 50px;
 }
 
 .cardText {
     width: 100%;
     display: flex;
     flex-direction: row;
+    padding-top: 30px;
 }
 
 .leftCard {
@@ -79,7 +80,7 @@
 }
 
 .date, .location {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -91,6 +92,7 @@
 .smallIcon {
     margin: 0px 7px;
     transition: all 0.3s ease;
+    font-size: 16px;
 }
 
 .middleCard {
@@ -105,38 +107,28 @@
 }
 
 .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    position: relative;
-    height: 100%;
-}
-
-.imageBorder {
-    width: 80%;
-    height: 100%;
-    position: absolute;
-    transform: translate(0px, -30px);
-    border: 2px solid #BDADEA;
+    width: 40%;
 }
 
 .image {
-    width: 80%;
     position: relative;
+    width: 100%;
     background: #ADCDEA;
-    transform: translate(30px, 0px);
-    z-index: 1;
+    transition: all 0.3s ease;
+    transform: translateY(30px)
 }
 
+.image:hover {
+    transform: scale(1.02) translateY(30px)
+}
 
 @media (max-width: 1300px) {
-    .heading {
-        font-size: 40px;
-    }
-    
     .role {
         font-size: 24px;
+    }
+
+    .card {
+        width: 80%
     }
     
     .employer {
@@ -153,6 +145,7 @@
 
     .cardText {
         flex-direction: column;
+        padding-top: 0px;
     }
     
     .information {
@@ -168,13 +161,31 @@
         max-width: 100%;
     }
 
-    .imageContainer {
-        margin-bottom: 10px;
-        margin-top: 30px;
-    }
-
     .summary {
         margin-top: 0px;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        margin-left: 0px;
+        transform: translateY(0px)
+    }
+
+    .image:hover {
+        transform: scale(1.02)
+    }
+}
+
+@media (max-width: 1008px) {
+    .heading {
+        padding-right: 0vw;
+        margin-left: 20px;
+        font-size: 40px;
+        margin-top: 35px;
     }
 }
 
