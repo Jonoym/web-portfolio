@@ -46,6 +46,16 @@ const Article = ({ details, type }) => {
         )
     }
 
+    const displayRepo = () => {
+        if (details.repo) {
+            return (
+                <a href={details.repo} target="_blank" className={`${styles.sourceCode} repoLink-${theme}`}>
+                    <FaGithub className={`${styles.icon} ${theme}`}/>
+                </a>
+            )
+        }
+    }
+
     return (
         <Page>
             {
@@ -57,9 +67,9 @@ const Article = ({ details, type }) => {
                     <div className={`headerText-${theme} headerText`}>
                         {details.title}
                     </div>
-                    <a href="https://github.com/" className={`${styles.sourceCode} repoLink-${theme}`}>
-                        <FaGithub className={`${styles.icon} ${theme}`}/>
-                    </a>
+                    {
+                        displayRepo()
+                    }
                 </div>
                 <div className={`${styles.employer} text subheaderText-${theme}`}>
                     {details.company}

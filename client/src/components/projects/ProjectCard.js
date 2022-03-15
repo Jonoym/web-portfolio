@@ -23,6 +23,16 @@ const ProjectCard = ({ details }) => {
         }
     }
 
+    const displayRepo = () => {
+        if (details.repo) {
+            return (
+                <a href={details.repo} target="_blank" className={`${styles.sourceCode} repoLink-${theme}`}>
+                    <FaGithub className={`${styles.icon} ${theme}`}/>
+                </a>
+            )
+        }
+    }
+
     return (
         <div className={`${styles.card} cardBar-${theme}`}>
             <Link to={`/${details.tag}`}>
@@ -37,9 +47,9 @@ const ProjectCard = ({ details }) => {
                     <Link to={`/${details.tag}`} className={`${styles.projectName} italics headerText-${theme} underline underline-${theme}`}>
                         {details.title}
                     </Link>
-                    <a href="https://github.com/" className={`${styles.sourceCode} repoLink-${theme}`}>
-                        <FaGithub className={`${styles.icon} ${theme}`}/>
-                    </a>
+                    {
+                        displayRepo()
+                    }
                 </div>
                 <div className={`${styles.date} text subheaderText-${theme}`}>
                     <FaCalendarAlt className={`${styles.smallIcon} icon-${theme}`}/>

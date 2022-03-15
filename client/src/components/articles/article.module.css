@@ -90,6 +90,10 @@
         width: 70%;
     }
 
+    .icon {
+        font-size: 55px;
+    }
+
     .summary {
         line-height: 30px;
     }
@@ -104,5 +108,11 @@
 
     .articleText {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .icon {
+        font-size: 45px;
     }
 }

@@ -13,8 +13,8 @@ const LinksBar = () => {
     return (
         <div className={`${styles.linksbar} containerOpaque-${theme}`}>
             <div className={`${styles.links}`}>
-                <a href="https://github.com/"><FaGithub className={`${styles.icon} ${theme}`}/></a>
-                <a href="https://www.linkedin.com/"><FaLinkedin className={styles.icon}/></a>
+                <a href="https://github.com/jonoym" target="_blank"><FaGithub className={`${styles.icon} ${theme}`}/></a>
+                <a href="https://www.linkedin.com/in/jonathanymtang" target="_blank"><FaLinkedin className={styles.icon}/></a>
                 <Link to="/contact"><FaEnvelope className={styles.icon}/></Link>
             </div>
         </div>
