@@ -38,7 +38,8 @@
         left: auto;
         padding: 6px 8px;
         background: transparent;
-        transform: translateY(60px)
+        transform: translateY(60px);
+        box-shadow: none;
     }
 
     .icon {

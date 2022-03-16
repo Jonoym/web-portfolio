@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane, FaLinkedin } from "react-icons/fa";
 import { createMessage } from "../../actions/contact";
 
 import Page from "../page/Page";
@@ -47,13 +47,19 @@ const Contact = () => {
             <div className={styles.hero}>
                 <div className={styles.contact}>
                     <div className={`subheaderText subheaderText-${theme} italics`}>If you'd ever like to get in touch,</div>
-                    <div className={`${styles.header} headerText-${theme}`}>Contact Me!</div>
+                    <div className={`headerText headerText-${theme} ${styles.headerContainer}`}>
+                        <div>
+                            Contact Me!
+                        </div>
+                    </div>
                     <div className={`subheaderText subheaderText-${theme} italics`}>I'm always keen to chat</div>
                 </div>
                 <div className={styles.form}>
                     <div className={styles.details}>
-                        <div className={`${styles.name} subheader subheaderText-${theme} italics`}>
-                            Name
+                        <div className={`${styles.name} subheader headerText-${theme} italics`}>
+                            <div className={styles.formLabel}>
+                                Name
+                            </div>
                             <input
                                 className={`input-${theme}`}
                                 name="name"
@@ -62,8 +68,10 @@ const Contact = () => {
                             >
                             </input>
                         </div>
-                        <div className={`${styles.email} subheader subheaderText-${theme} italics`}>
-                            Email
+                        <div className={`${styles.email} subheader headerText-${theme} italics`}>
+                            <div className={styles.formLabel}>
+                                Email
+                            </div>
                             <input
                                 className={`input-${theme}`}
                                 name="name"
@@ -73,8 +81,10 @@ const Contact = () => {
                             </input>
                         </div>
                     </div>
-                    <div className={`${styles.message} subheader subheaderText-${theme} italics`}>
-                        Message
+                    <div className={`${styles.message} subheader headerText-${theme} italics`}>
+                        <div className={styles.formLabel}>
+                            Message
+                        </div>
                         <textarea
                             className={`input-${theme}`}
                             name="name"

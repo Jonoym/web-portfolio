@@ -15,11 +15,11 @@ const About = () => {
     return (
         <Page path="/about">
             <div className={styles.container}>
-                <img src={Photo} className={styles.image}/>
+                {/* <img src={Photo} className={styles.image}/> */}
 
                 <div className={styles.contents}>
                     <div className={`subheaderText subheaderText-${theme} italics`}>Nice to meet you!</div>
-                    <div className={`${styles.headerText} headerText-${theme}`}>I'm Jonathan</div>
+                    <div className={`headerText headerText-${theme}`}>I'm Jonathan</div>
                     <div className={styles.about}>
                         <div className={`${styles.aboutContent}`}>
                             <div className={`${styles.locations}`}>
@@ -33,7 +33,7 @@ const About = () => {
                                 <span className={`text subheaderText-${theme} ${styles.spaced}`}>Auckland, NZ</span>
                             </div>
                         </div>
-                        <div className={`${styles.aboutContent} text subheaderText-${theme} bold`}>
+                        <div className={`${styles.aboutContent} text subheaderText-${theme} bold ${styles.listHeader}`}>
                             I'm a developer pursuing a degree in Software Engineering at the University of Queensland.
                         </div>
                         <div className={`${styles.listHeader} text subheaderText-${theme} bold`}>
@@ -74,7 +74,7 @@ const About = () => {
                             Currently looking for opportunities or internships to further develop my career in tech.
                         </div>
                     </div>
-                    <div className={`${styles.closingText} headerText-${theme}`}>Bye!</div>
+                    <div className={`${styles.closingText} headerText-${theme}`}>I'm glad to have you here!</div>
                 </div>
             </div>
         </Page>

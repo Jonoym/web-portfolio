@@ -51,14 +51,14 @@
 }
 
 .subheaderText {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     text-align: left;
     transition: all 0.3s ease;
 }
 
 .text {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     text-align: left;
     transition: all 0.3s ease;
@@ -369,6 +369,10 @@
     }
 
     .subheaderText {
+        font-size: 22px;
+    }
+
+    .text {
         font-size: 18px;
     }
 
@@ -383,11 +387,11 @@
     }
 
     .subheaderText {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .text {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .cardText {

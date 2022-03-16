@@ -8,6 +8,12 @@
     z-index: 1;
 }
 
+.previews {
+    width: 60%;
+    height: 20px;
+    background: red;
+}
+
 @media (max-width: 640px) {
     .hero {
         margin-right: 20px;
