@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import Page from "../page/Page";
 import { FaMapMarkerAlt, FaHome } from "react-icons/fa";
 
-import Photo from "../../images/image.png";
 import styles from "./about.module.css";
 import "../styles.css";
 

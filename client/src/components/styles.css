@@ -19,6 +19,34 @@
     font-family: 'Roboto', serif;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--dark-blue); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--light-purple); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue); 
+  }
+
+.container {
+    background: var(--grey-blue);
+}
+
+.offWhite {
+    color: var(--off-white);
+}
+
 .background-dark {
     background: var(--dark-blue);
 }

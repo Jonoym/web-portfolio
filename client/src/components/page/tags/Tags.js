@@ -4,7 +4,7 @@ import styles from "./tags.module.css";
 import "../../styles.css";
 import Tag from "./Tag";
 
-const Tags = ({ tags }) => {
+const Tags = ({ tags, alignRight }) => {
 
     const splitTags = () => {
         if (tags != null) {
@@ -13,17 +13,19 @@ const Tags = ({ tags }) => {
         return [];
     }
 
+    const alignRightClass = () => {
+        if (alignRight) {
+            return styles.alignRight
+        }
+    }
+
     return (
-        <div className={styles.tags}>
+        <div className={`${styles.tags} ${alignRightClass()}`}>
             {
                 splitTags().map((tag) => {
                     return (<Tag key={tag}>{tag}</Tag>);
                 })
             }
-            {/* <Tag main>Unity</Tag>
-            <Tag>Git</Tag>
-            <Tag>C#</Tag>
-            <Tag>Research</Tag> */}
         </div>
     );
 }

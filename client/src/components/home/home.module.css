@@ -4,18 +4,122 @@
     justify-content: center;
     margin: 20px;
     margin-right: 20%;
+    height: 80vh;
 
     z-index: 1;
 }
 
 .previews {
-    width: 60%;
-    height: 20px;
-    background: red;
+    width: 1000px;
+    margin-bottom: 100px;
+}
+
+.card {
+    height: 400px;
+    margin-bottom: 50px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.info {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    pointer-events: none;
+
+}
+
+.category {
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.cardTitle {
+    width: fit-content;
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.text {
+    width: 50%;
+    padding: 20px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.textAlignOdd {
+    text-align: right;
+}
+
+.containerOdd {
+    margin-left: auto
+}
+
+.tags {
+    width: 350px;
+}
+
+.image {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    right: 0px;
+    transition: all 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.02)
+}
+
+.imageOdd {
+    left: 0px;
+}
+
+@media (max-width: 1150px) {
+    .card {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .info {
+        position: relative;
+        width: 100%;
+    }
+
+    .image {
+        position: relative;
+        height: auto;
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    .previews {
+        width: 70%;
+        margin: 0px 100px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .tags {
+        width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
     .hero {
-        margin-right: 20px;
+        margin: 50px;
     }
 }

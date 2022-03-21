@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { FaMapMarkedAlt, FaCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from "./experience.module.css";
 import "../styles.css";
 import Tags from "../page/tags/Tags";
 import Loader from "../page/Loader";
-import Cow from "../../images/Cow.png";
 
-const Experience = ({ details }) => {
+const ExperienceCard = ({ details }) => {
+
+    AOS.init({
+        duration: 700,
+        once: true
+    });
 
     const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -24,7 +30,8 @@ const Experience = ({ details }) => {
     }
 
     return (
-        <div className={`${styles.card} cardBar-${theme}`}>
+        <div data-aos="fade-up">
+            <div className={`${styles.card} cardBar-${theme}`}>
             <div className={styles.cardText}>
                 <div className={`${styles.leftCard}`}>                
                     <div className={`${styles.information}`}>
@@ -58,7 +65,8 @@ const Experience = ({ details }) => {
                 }
             </Link>
         </div>
+        </div>
     );
 }
 
-export default Experience;
+export default ExperienceCard;
