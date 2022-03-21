@@ -7,37 +7,31 @@
     --light-grey-blue: #505075;
     --white: #EFEFEF;
     --off-white: #CCCCCC;
+    --scroll-bar: #BDADEA;
+    --scroll-bar-background: #0E1226;
 }
 
-/* ::selection {
-    background: var(--light-purple);
-} */
+::-webkit-scrollbar {
+    width: 15px;
+    transition: all 0.3s ease;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--scroll-bar-background); 
+    transition: all 0.3s ease;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar); 
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 
 * {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', serif;
 }
-
-::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--dark-blue); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--light-purple); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--dark-blue); 
-  }
 
 .container {
     background: var(--grey-blue);

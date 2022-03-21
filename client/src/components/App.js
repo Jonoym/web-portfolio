@@ -27,11 +27,10 @@ const App = () => {
         dispatch(getExperience())
     }, [dispatch])
 
-    const experience = useSelector((state) => state.experience);
-    const projects = useSelector((state) => state.projects);
+    const theme = useSelector((state) => state.theme);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter className={`scrollbar-${theme}`}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} /> 
