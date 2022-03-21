@@ -19,7 +19,16 @@ const Menu = () => {
 
     const dispatch = useDispatch();
 
-    const onClick = () => dispatch(switchTheme(theme));
+    const onClick = () => {
+        dispatch(switchTheme(theme));
+        if (theme === "dark") {
+            document.documentElement.style.setProperty('--scroll-bar', "#2C2C40");
+            document.documentElement.style.setProperty('--scroll-bar-background', "#EFEFEF");
+        } else {
+            document.documentElement.style.setProperty('--scroll-bar', "#BDADEA");
+            document.documentElement.style.setProperty('--scroll-bar-background', "#0E1226");
+        }
+    }
 
     const getIcon = () => {
         if (theme === "dark") {
